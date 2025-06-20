@@ -46,8 +46,8 @@ public:
 	static inline constexpr T poly_map_deg6(T x, T a0, T a1, T a2, T a3, T a4, T a5, T a6);
 	static inline constexpr T poly_map_degn(T x, T a[], int n);
 	static inline constexpr T fast_inv_sqrt(T number);
-
-	#include "Math_general.tpp"
 };
+
+#include "Math_general.tpp"
 
 #endif
