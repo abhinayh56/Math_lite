@@ -19,4 +19,5 @@ inline constexpr T Point1D<T>::distance(const Point1D<T>& p1, const Point1D<T>& 
 template <typename T>
 inline constexpr bool Point1D<T>::is_coincident(const Point1D<T>& p1, const Point1D<T>& p2)
 {
+    return true;
 }

@@ -9,7 +9,7 @@ class Line2D
 {
 public:
     Point2D<T> p(0, 0);
-    Vector2<T> v(1, 0);
+    Vector2<T> v(0, 0);
 
     constexpr Line2D();
     constexpr Line2D(Point2D<T> p_, Vector2<T> v_);
