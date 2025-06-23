@@ -156,7 +156,7 @@ inline constexpr Quaternion<T> Quaternion<T>::pow(const Quaternion<T> &q, T r)
 template <typename T>
 inline constexpr Quaternion<T> Quaternion<T>::LERP(const Quaternion<T> &q_1, const Quaternion<T> &q_2, T tau)
 {
-    return (q_1 - q_2) * tau + q_2;
+    return q_1 + (q_2 - q_1) * tau;
 }
 
 template <typename T>
