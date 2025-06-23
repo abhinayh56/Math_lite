@@ -61,7 +61,7 @@ inline constexpr T Vector4<T>::dot(const Vector4<T> &v1, const Vector4<T> &v2)
 template <typename T>
 inline constexpr Vector4<T> Vector4<T>::normalize(const Vector4<T> &v)
 {
-    T mag = magnitude(v);
+    T mag = std::sqrt(v.x * v.x + v.y * v.y + v.z * v.z + v.w * v.w);
     return Vector4<T>(v.x / mag, v.y / mag, v.z / mag, v.w / mag);
 }
 
@@ -220,5 +220,5 @@ constexpr bool Vector4<T>::operator==(const Vector4<T> &other) const
 template <typename T>
 constexpr bool Vector4<T>::operator!=(const Vector4<T> &other) const
 {
-    return !(*this == other);
+    return (x != other.x) || (y != other.y) || (z != other.z) || (w != other.w);
 }
