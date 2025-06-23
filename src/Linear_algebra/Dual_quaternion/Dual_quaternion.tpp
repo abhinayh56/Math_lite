@@ -296,6 +296,17 @@ constexpr DualQuaternion<T> DualQuaternion<T>::operator/(T scalar) const
 }
 
 template <typename T>
+constexpr DualQuaternion<T> DualQuaternion<T>::operator=(const DualQuaternion<T> &other) const
+{
+    if (this != &other)
+    {
+        real = other.real;
+        dual = other.dual;
+    }
+    return *this;
+}
+
+template <typename T>
 DualQuaternion<T> &DualQuaternion<T>::operator+=(const DualQuaternion<T> &other)
 {
     real += other.real;

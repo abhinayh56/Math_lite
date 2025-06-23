@@ -64,6 +64,7 @@ public:
     constexpr DualQuaternion<T> operator*(const DualQuaternion<T> &other) const;
     constexpr DualQuaternion<T> operator*(T scalar) const;
     constexpr DualQuaternion<T> operator/(T scalar) const;
+    constexpr DualQuaternion<T> operator=(const DualQuaternion<T> &other) const;
 
     DualQuaternion<T> &operator+=(const DualQuaternion<T> &other);
     DualQuaternion<T> &operator-=(const DualQuaternion<T> &other);
