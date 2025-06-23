@@ -67,7 +67,7 @@ inline constexpr Vector3<T> Vector3<T>::cross(const Vector3<T> &v1, const Vector
 template <typename T>
 inline constexpr Vector3<T> Vector3<T>::normalize(const Vector3<T> &v)
 {
-    T mag = magnitude(v);
+    T mag = std::sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
     return Vector3<T>(v.x / mag, v.y / mag, v.z / mag);
 }
 
@@ -92,7 +92,7 @@ inline constexpr T Vector3<T>::norm(const Vector3<T> &v)
 template <typename T>
 inline constexpr Vector3<T> Vector3<T>::angle(const Vector3<T> &v)
 {
-    T L = magnitude(v);
+    T L = std::sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
     return Vector3<T>(std::acos(v.x / L), std::acos(v.y / L), std::acos(v.z / L));
 }
 
@@ -226,5 +226,5 @@ constexpr bool Vector3<T>::operator==(const Vector3<T> &other) const
 template <typename T>
 constexpr bool Vector3<T>::operator!=(const Vector3<T> &other) const
 {
-    return !(*this == other);
+    return (x != other.x) || (y != other.y) || (z != other.z);
 }
