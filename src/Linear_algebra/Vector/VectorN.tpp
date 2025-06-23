@@ -265,6 +265,17 @@ VectorN<T, N> &VectorN<T, N>::operator%=(T scalar)
 }
 
 template <typename T, std::size_t N>
+VectorN<T, N> &VectorN<T, N>::normalize()
+{
+    T mag = std::sqrt(dot(*this, *this));
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        elements[i] /= mag;
+    }
+    return *this;
+}
+
+template <typename T, std::size_t N>
 constexpr bool VectorN<T, N>::operator==(const VectorN<T, N> &other) const
 {
     for (std::size_t i = 0; i < N; ++i)

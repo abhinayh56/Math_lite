@@ -210,6 +210,15 @@ Vector2<T> &Vector2<T>::operator%=(T scalar)
 }
 
 template <typename T>
+Vector2<T> &Vector2<T>::normalize()
+{
+    T mag = std::sqrt(x * x + y * y);
+    x = x / mag;
+    y = y / mag;
+    return *this;
+}
+
+template <typename T>
 constexpr bool Vector2<T>::operator==(const Vector2<T> &other) const
 {
     return (x == other.x) && (y == other.y);

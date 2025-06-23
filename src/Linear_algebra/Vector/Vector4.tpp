@@ -212,6 +212,17 @@ Vector4<T> &Vector4<T>::operator%=(T scalar)
 }
 
 template <typename T>
+Vector4<T> &Vector4<T>::normalize()
+{
+    T mag = std::sqrt(x * x + y * y + z * z + w * w);
+    x = x / mag;
+    y = y / mag;
+    z = z / mag;
+    w = w / mag;
+    return *this;
+}
+
+template <typename T>
 constexpr bool Vector4<T>::operator==(const Vector4<T> &other) const
 {
     return (x == other.x) && (y == other.y) && (z == other.z) && (w == other.w);

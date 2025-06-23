@@ -50,6 +50,7 @@ public:
     Vector2<T> &operator*=(T scalar);
     Vector2<T> &operator/=(T scalar);
     Vector2<T> &operator%=(T scalar);
+    Vector2<T> &normalize();
 
     constexpr bool operator==(const Vector2<T> &other) const;
     constexpr bool operator!=(const Vector2<T> &other) const;
