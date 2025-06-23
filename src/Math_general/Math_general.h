@@ -2,6 +2,7 @@
 #define MATH_GENERAL_H
 
 #include "../../../Constants/src/Constants.h"
+#include <cmath>
 
 template <typename T>
 class Math_general

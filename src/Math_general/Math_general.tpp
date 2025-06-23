@@ -333,14 +333,14 @@ inline constexpr T Math_general<T>::poly_map_deg6(T x, T a0, T a1, T a2, T a3, T
 template <typename T>
 inline constexpr T Math_general<T>::poly_map_degn(T x, T a[], int n)
 {
-	if (n >= 1)
+	T y = T(0);
+
+	for(int i = 0; i<n; i++)
 	{
-		return 0; // poly_map_degn(T x, T a[], int n-1);
+		y += a[i] * std::pow(x,i);
 	}
-	else
-	{
-		return a[0];
-	}
+	
+	return y;
 }
 
 // https://en.wikipedia.org/wiki/Fast_inverse_square_root
