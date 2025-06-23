@@ -156,7 +156,7 @@ inline constexpr Quaternion<T> Quaternion<T>::pow(const Quaternion<T> &q, T r)
 template <typename T>
 inline constexpr Quaternion<T> Quaternion<T>::LERP(const Quaternion<T> &q_1, const Quaternion<T> &q_2, T tau)
 {
-    return add(mul(q_1, tau), mul(q_2, (T(1) - tau)));
+    return (q_1 - q_2) * tau + q_2;
 }
 
 template <typename T>
@@ -345,5 +345,5 @@ constexpr bool Quaternion<T>::operator==(const Quaternion<T> &other) const
 template <typename T>
 constexpr bool Quaternion<T>::operator!=(const Quaternion<T> &other) const
 {
-    return !(*this == other);
+    return (q0 != other.q0) || (q1 != other.q1) || (q2 != other.q2) || (q3 != other.q3);
 }
