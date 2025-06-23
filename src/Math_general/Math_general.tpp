@@ -207,37 +207,37 @@ inline constexpr T Math_general<T>::apply_deadband2(T x, T deadband)
 template <typename T>
 inline constexpr T Math_general<T>::rad_2_deg(T x)
 {
-	return x * T(RAD_2_DEG);
+	return (T)RAD_2_DEG(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::deg_2_rad(T x)
 {
-	return x * T(DEG_2_RAD);
+	return (T)DEG_2_RAD(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::rpm_2_radps(T x)
 {
-	return x * T(RPM_2_RADPS);
+	return (T)RPM_2_RADPS(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::rpm_2_degps(T x)
 {
-	return x * T(RPM_2_DEGPS);
+	return (T)RPM_2_DEGPS(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::radps_2_rpm(T x)
 {
-	return x * T(RADPS_2_RPM);
+	return (T)RADPS_2_RPM(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::degps_2_rpm(T x)
 {
-	return x * T(DEGPS_2_RPM);
+	return (T)DEGPS_2_RPM(x);
 }
 
 template <typename T>
