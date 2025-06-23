@@ -8,7 +8,7 @@ template <typename T, std::size_t N>
 class VectorN
 {
 public:
-    T elements[N];
+    T *elements;
 
     // Constructors
     constexpr VectorN();
