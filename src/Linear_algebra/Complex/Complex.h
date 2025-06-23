@@ -68,4 +68,10 @@ public:
 
 #include "Complex.tpp"
 
+template <typename T>
+constexpr Complex<T> operator*(T scalar, const Complex<T> &other)
+{
+    return Complex<T>(other.real * scalar, other.imag * scalar);
+}
+
 #endif
