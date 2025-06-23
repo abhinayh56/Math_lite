@@ -5,6 +5,6 @@
 #include "Matrix3.h"
 #include "Matrix4.h"
 #include "MatrixN.h"
-// #include "MatrixMN.h"
+#include "MatrixMN.h"
 
 #endif
