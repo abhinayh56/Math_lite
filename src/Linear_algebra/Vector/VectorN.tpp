@@ -280,5 +280,12 @@ constexpr bool VectorN<T, N>::operator==(const VectorN<T, N> &other) const
 template <typename T, std::size_t N>
 constexpr bool VectorN<T, N>::operator!=(const VectorN<T, N> &other) const
 {
-    return !(*this == other);
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        if (elements[i] != other.elements[i])
+        {
+            return true;
+        }
+    }
+    return false;
 }
