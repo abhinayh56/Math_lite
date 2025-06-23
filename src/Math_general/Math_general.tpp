@@ -106,13 +106,13 @@ inline constexpr T Math_general<T>::wrap(T x, T a, T b)
 template <typename T>
 inline constexpr T Math_general<T>::wrap_pi(T x)
 {
-	if (x <= T(-MATH_PI))
+	if (x <= -MATH_PI)
 	{
-		return x + T(MATH_2_PI);
+		return x + MATH_2_PI;
 	}
-	else if (x > T(MATH_PI))
+	else if (x > MATH_PI)
 	{
-		return x - T(MATH_2_PI);
+		return x - MATH_2_PI;
 	}
 	else
 	{
@@ -125,11 +125,11 @@ inline constexpr T Math_general<T>::wrap_2pi(T x)
 {
 	if (x < T(0))
 	{
-		return x + T(MATH_2_PI);
+		return x + MATH_2_PI;
 	}
-	else if (x >= T(MATH_2_PI))
+	else if (x >= MATH_2_PI)
 	{
-		return x - T(MATH_2_PI);
+		return x - MATH_2_PI;
 	}
 	else
 	{
@@ -140,13 +140,13 @@ inline constexpr T Math_general<T>::wrap_2pi(T x)
 template <typename T>
 inline constexpr T Math_general<T>::wrap_180(T x)
 {
-	if (x <= T(-180))
+	if (x <= (-180.0))
 	{
-		return x + T(360);
+		return x + 360.0;
 	}
-	else if (x > T(180))
+	else if (x > 180.0)
 	{
-		return x - T(360);
+		return x - 360.0;
 	}
 	else
 	{
@@ -157,13 +157,13 @@ inline constexpr T Math_general<T>::wrap_180(T x)
 template <typename T>
 inline constexpr T Math_general<T>::wrap_360(T x)
 {
-	if (x < T(0))
+	if (x < 0)
 	{
-		return x + T(360);
+		return x + 360;
 	}
-	else if (x >= T(360))
+	else if (x >= 360)
 	{
-		return x - T(360);
+		return x - 360;
 	}
 	else
 	{
@@ -174,9 +174,9 @@ inline constexpr T Math_general<T>::wrap_360(T x)
 template <typename T>
 inline constexpr T Math_general<T>::apply_deadband(T x, T deadband)
 {
-	if (mod(x) < deadband * T(0.5))
+	if (mod(x) < deadband * 0.5)
 	{
-		return T(0);
+		return 0;
 	}
 	else
 	{
@@ -187,19 +187,19 @@ inline constexpr T Math_general<T>::apply_deadband(T x, T deadband)
 template <typename T>
 inline constexpr T Math_general<T>::apply_deadband2(T x, T deadband)
 {
-	if (mod(x) <= deadband * T(0.5))
+	if (mod(x) <= deadband * 0.5)
 	{
 		return 0;
 	}
 	else
 	{
-		if (x > deadband * T(0.5))
+		if (x > deadband * 0.5)
 		{
-			return x - deadband * T(0.5);
+			return x - deadband * 0.5;
 		}
 		else
 		{
-			return x + deadband * T(0.5);
+			return x + deadband * 0.5;
 		}
 	}
 }
@@ -207,85 +207,85 @@ inline constexpr T Math_general<T>::apply_deadband2(T x, T deadband)
 template <typename T>
 inline constexpr T Math_general<T>::rad_2_deg(T x)
 {
-	return (T)RAD_2_DEG(x);
+	return RAD_2_DEG(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::deg_2_rad(T x)
 {
-	return (T)DEG_2_RAD(x);
+	return DEG_2_RAD(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::rpm_2_radps(T x)
 {
-	return (T)RPM_2_RADPS(x);
+	return RPM_2_RADPS(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::rpm_2_degps(T x)
 {
-	return (T)RPM_2_DEGPS(x);
+	return RPM_2_DEGPS(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::radps_2_rpm(T x)
 {
-	return (T)RADPS_2_RPM(x);
+	return RADPS_2_RPM(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::degps_2_rpm(T x)
 {
-	return (T)DEGPS_2_RPM(x);
+	return DEGPS_2_RPM(x);
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_s(T freq)
 {
-	return T(1) / freq;
+	return 1.0 / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_ms(T freq)
 {
-	return T(1000) / freq;
+	return 1000.0 / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_us(T freq)
 {
-	return T(1000000) / freq;
+	return 1000000.0 / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_ns(T freq)
 {
-	return T(1000000000) / freq;
+	return 1000000000.0 / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::s_to_hz(T dt)
 {
-	return T(1) / dt;
+	return 1.0 / dt;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::ms_to_hz(T dt)
 {
-	return T(1000) / dt;
+	return 1000.0 / dt;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::us_to_hz(T dt)
 {
-	return T(1000000) / dt;
+	return 1000000.0 / dt;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::ns_to_hz(T dt)
 {
-	return T(1000000000) / dt;
+	return 1000000000.0 / dt;
 }
 
 template <typename T>
