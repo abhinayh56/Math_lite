@@ -64,4 +64,10 @@ public:
 
 #include "Quaternion.tpp"
 
+template <typename T>
+constexpr Quaternion<T> operator*(T scalar, const Quaternion<T> &q)
+{
+    return Quaternion<T>(q.q0 * scalar, q.q1 * scalar, q.q2 * scalar, q.q3 * scalar);
+}
+
 #endif

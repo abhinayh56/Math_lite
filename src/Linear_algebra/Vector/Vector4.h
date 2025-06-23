@@ -58,4 +58,10 @@ public:
 
 #include "Vector4.tpp"
 
+template <typename T>
+constexpr Vector4<T> operator*(T scalar, const Vector4<T> &v)
+{
+    return Vector4<T>(v.x * scalar, v.y * scalar, v.z * scalar, v.w * scalar);
+}
+
 #endif

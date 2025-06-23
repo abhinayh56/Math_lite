@@ -56,4 +56,10 @@ public:
 
 #include "VectorN.tpp"
 
+template <typename T, std::size_t N>
+constexpr VectorN<T, N> operator*(T scalar, const VectorN<T, N> &v)
+{
+    return VectorN<T, N>::mul(v, scalar);
+}
+
 #endif

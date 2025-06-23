@@ -59,4 +59,10 @@ public:
 
 #include "Vector3.tpp"
 
+template <typename T>
+constexpr Vector3<T> operator*(T scalar, const Vector3<T> &v)
+{
+    return Vector3<T>(v.x * scalar, v.y * scalar, v.z * scalar);
+}
+
 #endif
