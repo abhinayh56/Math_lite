@@ -51,6 +51,12 @@ int main()
     disp(v14);
     std::cout << "---\n";
 
+    disp(v1);
+    v1.normalize();
+    disp(v1);
+    disp(v1*v12);
+    std::cout << "---\n";
+
     std::cout << "bbbbb\n";
 
     return 0;
