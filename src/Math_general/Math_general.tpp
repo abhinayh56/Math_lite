@@ -335,11 +335,11 @@ inline constexpr T Math_general<T>::poly_map_degn(T x, T a[], int n)
 {
 	T y = T(0);
 
-	for(int i = 0; i<n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		y += a[i] * std::pow(x,i);
+		y += a[i] * std::pow(x, i);
 	}
-	
+
 	return y;
 }
 
