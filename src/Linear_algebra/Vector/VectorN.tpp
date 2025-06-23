@@ -10,7 +10,7 @@ constexpr VectorN<T, N>::VectorN()
 }
 
 template <typename T, std::size_t N>
-constexpr VectorN<T, N>::VectorN(const T* elements_)
+constexpr VectorN<T, N>::VectorN(const T *elements_)
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -41,7 +41,7 @@ inline constexpr VectorN<T, N> VectorN<T, N>::ones()
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::add(const VectorN<T, N>& v1, const VectorN<T, N>& v2)
+inline constexpr VectorN<T, N> VectorN<T, N>::add(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
 {
     VectorN<T, N> result;
     for (std::size_t i = 0; i < N; ++i)
@@ -52,7 +52,7 @@ inline constexpr VectorN<T, N> VectorN<T, N>::add(const VectorN<T, N>& v1, const
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N>& v1, const VectorN<T, N>& v2)
+inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
 {
     VectorN<T, N> result;
     for (std::size_t i = 0; i < N; ++i)
@@ -63,7 +63,7 @@ inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N>& v1, const
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::mul(const VectorN<T, N>& v, T s)
+inline constexpr VectorN<T, N> VectorN<T, N>::mul(const VectorN<T, N> &v, T s)
 {
     VectorN<T, N> result;
     for (std::size_t i = 0; i < N; ++i)
@@ -74,13 +74,13 @@ inline constexpr VectorN<T, N> VectorN<T, N>::mul(const VectorN<T, N>& v, T s)
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::mul(T s, const VectorN<T, N>& v)
+inline constexpr VectorN<T, N> VectorN<T, N>::mul(T s, const VectorN<T, N> &v)
 {
     return mul(v, s);
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::div(const VectorN<T, N>& v, T s)
+inline constexpr VectorN<T, N> VectorN<T, N>::div(const VectorN<T, N> &v, T s)
 {
     VectorN<T, N> result;
     for (std::size_t i = 0; i < N; ++i)
@@ -91,7 +91,7 @@ inline constexpr VectorN<T, N> VectorN<T, N>::div(const VectorN<T, N>& v, T s)
 }
 
 template <typename T, std::size_t N>
-inline constexpr T VectorN<T, N>::dot(const VectorN<T, N>& v1, const VectorN<T, N>& v2)
+inline constexpr T VectorN<T, N>::dot(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
 {
     T result = T(0);
     for (std::size_t i = 0; i < N; ++i)
@@ -102,26 +102,26 @@ inline constexpr T VectorN<T, N>::dot(const VectorN<T, N>& v1, const VectorN<T, 
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::normalize(const VectorN<T, N>& v)
+inline constexpr VectorN<T, N> VectorN<T, N>::normalize(const VectorN<T, N> &v)
 {
     T mag = magnitude(v);
     return div(v, mag);
 }
 
 template <typename T, std::size_t N>
-inline constexpr T VectorN<T, N>::magnitude(const VectorN<T, N>& v)
+inline constexpr T VectorN<T, N>::magnitude(const VectorN<T, N> &v)
 {
     return std::sqrt(dot(v, v));
 }
 
 template <typename T, std::size_t N>
-inline constexpr T VectorN<T, N>::length(const VectorN<T, N>& v)
+inline constexpr T VectorN<T, N>::length(const VectorN<T, N> &v)
 {
     return std::sqrt(dot(v, v));
 }
 
 template <typename T, std::size_t N>
-inline constexpr T VectorN<T, N>::norm(const VectorN<T, N>& v)
+inline constexpr T VectorN<T, N>::norm(const VectorN<T, N> &v)
 {
     return std::sqrt(dot(v, v));
 }
@@ -144,7 +144,7 @@ constexpr VectorN<T, N> VectorN<T, N>::operator-() const
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator++()
+VectorN<T, N> &VectorN<T, N>::operator++()
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -162,7 +162,7 @@ VectorN<T, N> VectorN<T, N>::operator++(int)
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator--()
+VectorN<T, N> &VectorN<T, N>::operator--()
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -180,13 +180,13 @@ VectorN<T, N> VectorN<T, N>::operator--(int)
 }
 
 template <typename T, std::size_t N>
-constexpr VectorN<T, N> VectorN<T, N>::operator+(const VectorN<T, N>& other) const
+constexpr VectorN<T, N> VectorN<T, N>::operator+(const VectorN<T, N> &other) const
 {
     return add(*this, other);
 }
 
 template <typename T, std::size_t N>
-constexpr VectorN<T, N> VectorN<T, N>::operator-(const VectorN<T, N>& other) const
+constexpr VectorN<T, N> VectorN<T, N>::operator-(const VectorN<T, N> &other) const
 {
     return sub(*this, other);
 }
@@ -215,7 +215,7 @@ constexpr VectorN<T, N> VectorN<T, N>::operator%(T scalar) const
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator+=(const VectorN<T, N>& other)
+VectorN<T, N> &VectorN<T, N>::operator+=(const VectorN<T, N> &other)
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -225,7 +225,7 @@ VectorN<T, N>& VectorN<T, N>::operator+=(const VectorN<T, N>& other)
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator-=(const VectorN<T, N>& other)
+VectorN<T, N> &VectorN<T, N>::operator-=(const VectorN<T, N> &other)
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -235,7 +235,7 @@ VectorN<T, N>& VectorN<T, N>::operator-=(const VectorN<T, N>& other)
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator*=(T scalar)
+VectorN<T, N> &VectorN<T, N>::operator*=(T scalar)
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -245,7 +245,7 @@ VectorN<T, N>& VectorN<T, N>::operator*=(T scalar)
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator/=(T scalar)
+VectorN<T, N> &VectorN<T, N>::operator/=(T scalar)
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -255,7 +255,7 @@ VectorN<T, N>& VectorN<T, N>::operator/=(T scalar)
 }
 
 template <typename T, std::size_t N>
-VectorN<T, N>& VectorN<T, N>::operator%=(T scalar)
+VectorN<T, N> &VectorN<T, N>::operator%=(T scalar)
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -265,7 +265,7 @@ VectorN<T, N>& VectorN<T, N>::operator%=(T scalar)
 }
 
 template <typename T, std::size_t N>
-constexpr bool VectorN<T, N>::operator==(const VectorN<T, N>& other) const
+constexpr bool VectorN<T, N>::operator==(const VectorN<T, N> &other) const
 {
     for (std::size_t i = 0; i < N; ++i)
     {
@@ -278,7 +278,7 @@ constexpr bool VectorN<T, N>::operator==(const VectorN<T, N>& other) const
 }
 
 template <typename T, std::size_t N>
-constexpr bool VectorN<T, N>::operator!=(const VectorN<T, N>& other) const
+constexpr bool VectorN<T, N>::operator!=(const VectorN<T, N> &other) const
 {
     return !(*this == other);
 }
