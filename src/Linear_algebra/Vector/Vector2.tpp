@@ -210,6 +210,17 @@ Vector2<T> &Vector2<T>::operator%=(T scalar)
 }
 
 template <typename T>
+Vector2<T> &Vector2<T>::operator=(const Vector2<T> &other)
+{
+    if (this != &other)
+    {
+        x = other.x;
+        y = other.y;
+    }
+    return *this;
+}
+
+template <typename T>
 Vector2<T> &Vector2<T>::normalize()
 {
     T mag = std::sqrt(x * x + y * y);

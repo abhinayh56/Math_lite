@@ -48,6 +48,7 @@ public:
     VectorN<T, N> &operator*=(T scalar);
     VectorN<T, N> &operator/=(T scalar);
     VectorN<T, N> &operator%=(T scalar);
+    VectorN<T, N> &operator=(const VectorN<T, N> &other);
     VectorN<T, N> &normalize();
 
     constexpr bool operator==(const VectorN<T, N> &other) const;

@@ -57,6 +57,7 @@ public:
     Quaternion<T> &operator*=(T scalar);
     Quaternion<T> &operator/=(T scalar);
     Quaternion<T> &operator%=(T scalar);
+    Quaternion<T> &operator=(const Quaternion<T> &other);
 
     constexpr bool operator==(const Quaternion<T> &other) const;
     constexpr bool operator!=(const Quaternion<T> &other) const;

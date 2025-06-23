@@ -289,6 +289,17 @@ Complex<T> &Complex<T>::operator/=(T scalar)
 }
 
 template <typename T>
+Complex<T> &Complex<T>::operator=(const Complex<T> &other)
+{
+    if (this != &other)
+    {
+        real = other.real;
+        imag = other.imag;
+    }
+    return *this;
+}
+
+template <typename T>
 constexpr bool Complex<T>::operator==(const Complex<T> &other) const
 {
     return (real == other.real) && (imag == other.imag);

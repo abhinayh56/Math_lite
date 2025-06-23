@@ -212,6 +212,19 @@ Vector4<T> &Vector4<T>::operator%=(T scalar)
 }
 
 template <typename T>
+Vector4<T> &Vector4<T>::operator=(const Vector4<T> &other)
+{
+    if (this != &other)
+    {
+        x = other.x;
+        y = other.y;
+        z = other.z;
+        w = other.w;
+    }
+    return *this;
+}
+
+template <typename T>
 Vector4<T> &Vector4<T>::normalize()
 {
     T mag = std::sqrt(x * x + y * y + z * z + w * w);

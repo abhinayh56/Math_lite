@@ -51,6 +51,7 @@ public:
     Vector3<T> &operator*=(T scalar);
     Vector3<T> &operator/=(T scalar);
     Vector3<T> &operator%=(T scalar);
+    Vector3<T> &operator=(const Vector3<T> &other);
     Vector3<T> &normalize();
 
     constexpr bool operator==(const Vector3<T> &other) const;

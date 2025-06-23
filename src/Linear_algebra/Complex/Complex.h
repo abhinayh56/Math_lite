@@ -61,6 +61,7 @@ public:
     Complex<T> &operator*=(T scalar);
     Complex<T> &operator/=(const Complex<T> &other);
     Complex<T> &operator/=(T scalar);
+    Complex<T> &operator=(const Complex<T> &other);
 
     constexpr bool operator==(const Complex<T> &other) const;
     constexpr bool operator!=(const Complex<T> &other) const;

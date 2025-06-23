@@ -337,6 +337,19 @@ Quaternion<T> &Quaternion<T>::operator%=(T scalar)
 }
 
 template <typename T>
+Quaternion<T> &Quaternion<T>::operator=(const Quaternion<T> &other)
+{
+    if (this != &other)
+    {
+        q0 = other.q0;
+        q1 = other.q1;
+        q2 = other.q2;
+        q3 = other.q3;
+    }
+    return *this;
+}
+
+template <typename T>
 constexpr bool Quaternion<T>::operator==(const Quaternion<T> &other) const
 {
     return (q0 == other.q0) && (q1 == other.q1) && (q2 == other.q2) && (q3 == other.q3);
