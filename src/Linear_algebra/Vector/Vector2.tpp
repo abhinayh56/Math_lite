@@ -67,7 +67,7 @@ inline constexpr T Vector2<T>::cross(const Vector2<T> &v1, const Vector2<T> &v2)
 template <typename T>
 inline constexpr Vector2<T> Vector2<T>::normalize(const Vector2<T> &v)
 {
-    T mag = magnitude(v);
+    T mag = std::sqrt(v.x * v.x + v.y * v.y);
     return Vector2<T>(v.x / mag, v.y / mag);
 }
 
@@ -218,5 +218,5 @@ constexpr bool Vector2<T>::operator==(const Vector2<T> &other) const
 template <typename T>
 constexpr bool Vector2<T>::operator!=(const Vector2<T> &other) const
 {
-    return !(*this == other);
+    return (x != other.x) || (y != other.y);
 }
