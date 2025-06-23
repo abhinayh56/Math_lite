@@ -1,4 +1,4 @@
-// #include "MatrixMN.h"
+#include "MatrixMN.h"
 
 template <typename T, size_t M, size_t N>
 constexpr MatrixMN<T, M, N>::MatrixMN()
