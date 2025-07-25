@@ -7,6 +7,8 @@
         "functional": "cpp",
         "random": "cpp",
         "string": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
