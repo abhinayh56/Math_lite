@@ -8,18 +8,20 @@ template <typename T, std::size_t N>
 class VectorN
 {
 public:
-    T *elements;
+    T elements[N];
 
     // Constructors
     constexpr VectorN();
-    constexpr VectorN(const T *elements_);
+    constexpr VectorN(const T (&elements_)[N]);
+    template <typename... Args>
+    constexpr VectorN(Args... elements_) : elements{static_cast<T>(elements_)...}
+    {
+        static_assert(sizeof...(Args) == N, "Number of arguments must be equal to N");
+    }
 
     // Element accessor / modifier
     constexpr T &operator()(int index = 0);
     constexpr const T &operator()(int index = 0) const;
-
-    // Element accessor / modifier
-    constexpr T &operator()(int index = 0);
 
     static inline constexpr VectorN<T, N> zero();
     static inline constexpr VectorN<T, N> ones();

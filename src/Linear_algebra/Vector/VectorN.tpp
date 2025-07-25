@@ -10,7 +10,7 @@ constexpr VectorN<T, N>::VectorN()
 }
 
 template <typename T, std::size_t N>
-constexpr VectorN<T, N>::VectorN(const T *elements_)
+constexpr VectorN<T, N>::VectorN(const T (&elements_)[N])
 {
     for (std::size_t i = 0; i < N; ++i)
     {

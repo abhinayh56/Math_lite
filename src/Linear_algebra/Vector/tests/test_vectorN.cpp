@@ -1,9 +1,9 @@
-#include "../Vector2.h"
+#include "../VectorN.h"
 #include <iostream>
 
 int main()
 {
-    Vector2<int> v1(3, 4);
+    VectorN<int, 4> v1 = {12, 34, 3, 74};
 
     std::cout << "v1: (" << v1(0) << ", " << v1(1) << ")\n";
     v1(0) = 56;
@@ -12,7 +12,7 @@ int main()
 
     int *aaa = &v1(0);
 
-    *aaa = 447;
+    *aaa = 5412;
 
     std::cout << "v1: (" << v1(0) << ", " << v1(1) << ")\n";
 
