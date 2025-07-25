@@ -19,6 +19,32 @@ constexpr VectorN<T, N>::VectorN(const T *elements_)
 }
 
 template <typename T, std::size_t N>
+constexpr T &VectorN<T, N>::operator()(int index)
+{
+    if ((index >= 0) || (index <= (N - 1)))
+    {
+        return elements[index];
+    }
+    else
+    {
+        return elements[0];
+    }
+}
+
+template <typename T, std::size_t N>
+constexpr const T &VectorN<T, N>::operator()(int index) const
+{
+    if ((index >= 0) || (index <= (N - 1)))
+    {
+        return elements[index];
+    }
+    else
+    {
+        return elements[0];
+    }
+}
+
+template <typename T, std::size_t N>
 inline constexpr VectorN<T, N> VectorN<T, N>::zero()
 {
     VectorN<T, N> result;

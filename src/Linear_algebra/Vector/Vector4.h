@@ -16,6 +16,10 @@ public:
     constexpr Vector4();
     constexpr Vector4(T x, T y, T z, T w);
 
+    // Element accessor / modifier
+    constexpr T &operator()(int index = 0);
+    constexpr const T &operator()(int index = 0) const;
+
     static inline constexpr Vector4<T> zero();
     static inline constexpr Vector4<T> ones();
 

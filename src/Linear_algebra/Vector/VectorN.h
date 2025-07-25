@@ -14,6 +14,13 @@ public:
     constexpr VectorN();
     constexpr VectorN(const T *elements_);
 
+    // Element accessor / modifier
+    constexpr T &operator()(int index = 0);
+    constexpr const T &operator()(int index = 0) const;
+
+    // Element accessor / modifier
+    constexpr T &operator()(int index = 0);
+
     static inline constexpr VectorN<T, N> zero();
     static inline constexpr VectorN<T, N> ones();
 

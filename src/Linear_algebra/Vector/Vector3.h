@@ -15,6 +15,10 @@ public:
     constexpr Vector3();
     constexpr Vector3(T x, T y, T z);
 
+    // Element accessor / modifier
+    constexpr T &operator()(int index = 0);
+    constexpr const T &operator()(int index = 0) const;
+
     static inline constexpr Vector3<T> zero();
     static inline constexpr Vector3<T> ones();
 

@@ -14,6 +14,10 @@ public:
     constexpr Vector2();
     constexpr Vector2(T x, T y);
 
+    // Element accessor / modifier
+    constexpr T &operator()(int index = 0);
+    constexpr const T &operator()(int index = 0) const;
+
     static inline constexpr Vector2<T> zero();
     static inline constexpr Vector2<T> ones();
 

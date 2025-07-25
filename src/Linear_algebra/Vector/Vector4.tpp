@@ -11,6 +11,48 @@ constexpr Vector4<T>::Vector4(T x, T y, T z, T w) : x(x), y(y), z(z), w(w)
 }
 
 template <typename T>
+constexpr T &Vector4<T>::operator()(int index)
+{
+    if (index == 3)
+    {
+        return w;
+    }
+    else if (index == 2)
+    {
+        return z;
+    }
+    else if (index = 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
+constexpr const T &Vector4<T>::operator()(int index) const
+{
+    if (index == 3)
+    {
+        return w;
+    }
+    else if (index == 2)
+    {
+        return z;
+    }
+    else if (index = 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
 inline constexpr Vector4<T> Vector4<T>::zero()
 {
     return Vector4<T>(0, 0, 0, 0);

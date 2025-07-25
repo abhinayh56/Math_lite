@@ -11,6 +11,32 @@ constexpr Vector2<T>::Vector2(T x, T y) : x(x), y(y)
 }
 
 template <typename T>
+constexpr T &Vector2<T>::operator()(int index)
+{
+    if (index == 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
+constexpr const T &Vector2<T>::operator()(int index) const
+{
+    if (index == 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
 inline constexpr Vector2<T> Vector2<T>::zero()
 {
     return Vector2<T>(0, 0);

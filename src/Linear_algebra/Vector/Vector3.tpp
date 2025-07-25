@@ -11,6 +11,40 @@ constexpr Vector3<T>::Vector3(T x, T y, T z) : x(x), y(y), z(z)
 }
 
 template <typename T>
+constexpr T &Vector3<T>::operator()(int index)
+{
+    if (index == 2)
+    {
+        return z;
+    }
+    else if (index = 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
+constexpr const T &Vector3<T>::operator()(int index) const
+{
+    if (index == 2)
+    {
+        return z;
+    }
+    else if (index = 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
 inline constexpr Vector3<T> Vector3<T>::zero()
 {
     return Vector3<T>(0, 0, 0);
