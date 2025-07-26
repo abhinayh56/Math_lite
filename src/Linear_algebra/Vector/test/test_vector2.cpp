@@ -143,5 +143,9 @@ int main()
     flag = (v3 != v1);
     cout << "flag: " << flag << endl;
 
+    disp("v3", v3);
+    disp("v3", v3+5);
+    disp("v3", 5.0f+v3);
+
     return 0;
 }

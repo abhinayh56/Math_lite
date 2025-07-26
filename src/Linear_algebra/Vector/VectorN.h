@@ -75,9 +75,27 @@ public:
 #include "VectorN.tpp"
 
 template <typename T, std::size_t N>
+constexpr VectorN<T, N> operator+(T scalar, const VectorN<T, N> &v)
+{
+    return VectorN<T, N>::mul(scalar + v);
+}
+
+template <typename T, std::size_t N>
+constexpr VectorN<T, N> operator-(T scalar, const VectorN<T, N> &v)
+{
+    return VectorN<T, N>::mul(scalar - v);
+}
+
+template <typename T, std::size_t N>
 constexpr VectorN<T, N> operator*(T scalar, const VectorN<T, N> &v)
 {
-    return VectorN<T, N>::mul(v, scalar);
+    return VectorN<T, N>::mul(scalar * v);
+}
+
+template <typename T, std::size_t N>
+constexpr VectorN<T, N> operator/(T scalar, const VectorN<T, N> &v)
+{
+    return VectorN<T, N>::mul(scalar / v);
 }
 
 #endif

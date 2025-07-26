@@ -72,9 +72,27 @@ public:
 #include "Vector2.tpp"
 
 template <typename T>
+constexpr Vector2<T> operator+(T scalar, const Vector2<T> &v)
+{
+    return Vector2<T>(scalar + v.x, scalar + v.y);
+}
+
+template <typename T>
+constexpr Vector2<T> operator-(T scalar, const Vector2<T> &v)
+{
+    return Vector2<T>(scalar - v.x, scalar - v.y);
+}
+
+template <typename T>
 constexpr Vector2<T> operator*(T scalar, const Vector2<T> &v)
 {
-    return Vector2<T>(v.x * scalar, v.y * scalar);
+    return Vector2<T>(scalar * v.x, scalar * v.y);
+}
+
+template <typename T>
+constexpr Vector2<T> operator/(T scalar, const Vector2<T> &v)
+{
+    return Vector2<T>(scalar / v.x, scalar / v.y);
 }
 
 #endif
