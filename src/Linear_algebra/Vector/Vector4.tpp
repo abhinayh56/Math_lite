@@ -83,7 +83,19 @@ inline constexpr Vector4<T> Vector4<T>::add(const Vector4<T> &v1, T s)
 }
 
 template <typename T>
+inline constexpr Vector4<T> Vector4<T>::add(T s, const Vector4<T> &v1)
+{
+    return Vector4<T>(v1.x + s, v1.y + s, v1.z + s, v1.w + s);
+}
+
+template <typename T>
 inline constexpr Vector4<T> Vector4<T>::sub(const Vector4<T> &v1, T s)
+{
+    return Vector4<T>(v1.x - s, v1.y - s, v1.z - s, v1.w - s);
+}
+
+template <typename T>
+inline constexpr Vector4<T> Vector4<T>::sub(T s, const Vector4<T> &v1)
 {
     return Vector4<T>(v1.x - s, v1.y - s, v1.z - s, v1.w - s);
 }
