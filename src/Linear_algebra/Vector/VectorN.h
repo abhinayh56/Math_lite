@@ -36,6 +36,7 @@ public:
     static inline constexpr VectorN<T, N> mul(const VectorN<T, N> &v, T s);
     static inline constexpr VectorN<T, N> mul(T s, const VectorN<T, N> &v);
     static inline constexpr VectorN<T, N> div(const VectorN<T, N> &v, T s);
+    static inline constexpr VectorN<T, N> div(T s, const VectorN<T, N> &v);
 
     static inline constexpr T dot(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
     static inline constexpr VectorN<T, N> normalize(const VectorN<T, N> &v);

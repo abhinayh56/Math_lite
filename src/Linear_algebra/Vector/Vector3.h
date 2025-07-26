@@ -32,6 +32,7 @@ public:
     static inline constexpr Vector3<T> mul(const Vector3<T> &v, T s);
     static inline constexpr Vector3<T> mul(T s, const Vector3<T> &v);
     static inline constexpr Vector3<T> div(const Vector3<T> &v, T s);
+    static inline constexpr Vector3<T> div(T s, const Vector3<T> &v);
 
     static inline constexpr T dot(const Vector3<T> &v1, const Vector3<T> &v2);
     static inline constexpr Vector3<T> cross(const Vector3<T> &v1, const Vector3<T> &v2);
