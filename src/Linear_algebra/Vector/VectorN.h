@@ -28,9 +28,9 @@ public:
 
     // Static member functions
     static inline constexpr VectorN<T, N> add(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
-    static inline constexpr VectorN<T, N> sub(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
     static inline constexpr VectorN<T, N> add(const VectorN<T, N> &v1, T s);
     static inline constexpr VectorN<T, N> add(T s, const VectorN<T, N> &v1);
+    static inline constexpr VectorN<T, N> sub(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
     static inline constexpr VectorN<T, N> sub(const VectorN<T, N> &v1, T s);
     static inline constexpr VectorN<T, N> sub(T s, const VectorN<T, N> &v1);
     static inline constexpr VectorN<T, N> mul(const VectorN<T, N> &v, T s);

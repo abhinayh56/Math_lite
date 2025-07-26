@@ -24,9 +24,9 @@ public:
 
     // Static member functions
     static inline constexpr Vector3<T> add(const Vector3<T> &v1, const Vector3<T> &v2);
-    static inline constexpr Vector3<T> sub(const Vector3<T> &v1, const Vector3<T> &v2);
     static inline constexpr Vector3<T> add(const Vector3<T> &v1, T s);
     static inline constexpr Vector3<T> add(T s, const Vector3<T> &v1);
+    static inline constexpr Vector3<T> sub(const Vector3<T> &v1, const Vector3<T> &v2);
     static inline constexpr Vector3<T> sub(const Vector3<T> &v1, T s);
     static inline constexpr Vector3<T> sub(T s, const Vector3<T> &v1);
     static inline constexpr Vector3<T> mul(const Vector3<T> &v, T s);

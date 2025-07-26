@@ -78,17 +78,6 @@ inline constexpr VectorN<T, N> VectorN<T, N>::add(const VectorN<T, N> &v1, const
 }
 
 template <typename T, std::size_t N>
-inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
-{
-    VectorN<T, N> result;
-    for (std::size_t i = 0; i < N; ++i)
-    {
-        result.elements[i] = v1.elements[i] - v2.elements[i];
-    }
-    return result;
-}
-
-template <typename T, std::size_t N>
 inline constexpr VectorN<T, N> VectorN<T, N>::add(const VectorN<T, N> &v1, T s)
 {
     VectorN<T, N> result;
@@ -106,6 +95,17 @@ inline constexpr VectorN<T, N> VectorN<T, N>::add(T s, const VectorN<T, N> &v1)
     for (std::size_t i = 0; i < N; ++i)
     {
         result.elements[i] = v1.elements[i] + s;
+    }
+    return result;
+}
+
+template <typename T, std::size_t N>
+inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
+{
+    VectorN<T, N> result;
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        result.elements[i] = v1.elements[i] - v2.elements[i];
     }
     return result;
 }
