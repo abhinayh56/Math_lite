@@ -61,6 +61,18 @@ inline constexpr Vector2<T> Vector2<T>::sub(const Vector2<T> &v1, const Vector2<
 }
 
 template <typename T>
+inline constexpr Vector2<T> Vector2<T>::add(const Vector2<T> &v1, T s)
+{
+    return Vector2<T>(v1.x + s, v1.y + s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::sub(const Vector2<T> &v1, T s)
+{
+    return Vector2<T>(v1.x - s, v1.y - s);
+}
+
+template <typename T>
 inline constexpr Vector2<T> Vector2<T>::mul(const Vector2<T> &v, T s)
 {
     return Vector2<T>(v.x * s, v.y * s);
@@ -178,6 +190,18 @@ constexpr Vector2<T> Vector2<T>::operator-(const Vector2<T> &other) const
 }
 
 template <typename T>
+constexpr Vector2<T> Vector2<T>::operator+(T scalar) const
+{
+    return Vector2<T>(x + scalar, y + scalar);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator-(T scalar) const
+{
+    return Vector2<T>(x - scalar, y - scalar);
+}
+
+template <typename T>
 constexpr Vector2<T> Vector2<T>::operator*(T scalar) const
 {
     return Vector2<T>(x * scalar, y * scalar);
@@ -208,6 +232,22 @@ Vector2<T> &Vector2<T>::operator-=(const Vector2<T> &other)
 {
     x -= other.x;
     y -= other.y;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator+=(T scalar)
+{
+    x += scalar;
+    y += scalar;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator-=(T scalar)
+{
+    x -= scalar;
+    y -= scalar;
     return *this;
 }
 

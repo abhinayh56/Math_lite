@@ -69,6 +69,18 @@ inline constexpr Vector3<T> Vector3<T>::sub(const Vector3<T> &v1, const Vector3<
 }
 
 template <typename T>
+inline constexpr Vector3<T> Vector3<T>::add(const Vector3<T> &v1, T s)
+{
+    return Vector3<T>(v1.x + s, v1.y + s, v1.z + s);
+}
+
+template <typename T>
+inline constexpr Vector3<T> Vector3<T>::sub(const Vector3<T> &v1, T s)
+{
+    return Vector3<T>(v1.x - s, v1.y - s, v1.z - s);
+}
+
+template <typename T>
 inline constexpr Vector3<T> Vector3<T>::mul(const Vector3<T> &v, T s)
 {
     return Vector3<T>(v.x * s, v.y * s, v.z * s);
@@ -189,6 +201,18 @@ constexpr Vector3<T> Vector3<T>::operator-(const Vector3<T> &other) const
 }
 
 template <typename T>
+constexpr Vector3<T> Vector3<T>::operator+(T scalar) const
+{
+    return Vector3<T>(x + scalar, y + scalar, z + scalar);
+}
+
+template <typename T>
+constexpr Vector3<T> Vector3<T>::operator-(T scalar) const
+{
+    return Vector3<T>(x - scalar, y - scalar, z - scalar);
+}
+
+template <typename T>
 constexpr Vector3<T> Vector3<T>::operator*(T scalar) const
 {
     return Vector3<T>(x * scalar, y * scalar, z * scalar);
@@ -221,6 +245,24 @@ Vector3<T> &Vector3<T>::operator-=(const Vector3<T> &other)
     x -= other.x;
     y -= other.y;
     z -= other.z;
+    return *this;
+}
+
+template <typename T>
+Vector3<T> &Vector3<T>::operator+=(T scalar)
+{
+    x += scalar;
+    y += scalar;
+    z += scalar;
+    return *this;
+}
+
+template <typename T>
+Vector3<T> &Vector3<T>::operator-=(T scalar)
+{
+    x -= scalar;
+    y -= scalar;
+    z -= scalar;
     return *this;
 }
 

@@ -29,6 +29,8 @@ public:
     // Static member functions
     static inline constexpr VectorN<T, N> add(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
     static inline constexpr VectorN<T, N> sub(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
+    static inline constexpr VectorN<T, N> add(const VectorN<T, N> &v1, T s);
+    static inline constexpr VectorN<T, N> sub(const VectorN<T, N> &v1, T s);
     static inline constexpr VectorN<T, N> mul(const VectorN<T, N> &v, T s);
     static inline constexpr VectorN<T, N> mul(T s, const VectorN<T, N> &v);
     static inline constexpr VectorN<T, N> div(const VectorN<T, N> &v, T s);
@@ -48,12 +50,16 @@ public:
 
     constexpr VectorN<T, N> operator+(const VectorN<T, N> &other) const;
     constexpr VectorN<T, N> operator-(const VectorN<T, N> &other) const;
+    constexpr VectorN<T, N> operator+(T scalar) const;
+    constexpr VectorN<T, N> operator-(T scalar) const;
     constexpr VectorN<T, N> operator*(T scalar) const;
     constexpr VectorN<T, N> operator/(T scalar) const;
     constexpr VectorN<T, N> operator%(T scalar) const;
 
     VectorN<T, N> &operator+=(const VectorN<T, N> &other);
     VectorN<T, N> &operator-=(const VectorN<T, N> &other);
+    VectorN<T, N> &operator+=(T scalar);
+    VectorN<T, N> &operator-=(T scalar);
     VectorN<T, N> &operator*=(T scalar);
     VectorN<T, N> &operator/=(T scalar);
     VectorN<T, N> &operator%=(T scalar);

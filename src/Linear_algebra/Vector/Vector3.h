@@ -25,6 +25,8 @@ public:
     // Static member functions
     static inline constexpr Vector3<T> add(const Vector3<T> &v1, const Vector3<T> &v2);
     static inline constexpr Vector3<T> sub(const Vector3<T> &v1, const Vector3<T> &v2);
+    static inline constexpr Vector3<T> add(const Vector3<T> &v1, T s);
+    static inline constexpr Vector3<T> sub(const Vector3<T> &v1, T s);
     static inline constexpr Vector3<T> mul(const Vector3<T> &v, T s);
     static inline constexpr Vector3<T> mul(T s, const Vector3<T> &v);
     static inline constexpr Vector3<T> div(const Vector3<T> &v, T s);
@@ -46,12 +48,16 @@ public:
 
     constexpr Vector3<T> operator+(const Vector3<T> &other) const;
     constexpr Vector3<T> operator-(const Vector3<T> &other) const;
+    constexpr Vector3<T> operator+(T scalar) const;
+    constexpr Vector3<T> operator-(T scalar) const;
     constexpr Vector3<T> operator*(T scalar) const;
     constexpr Vector3<T> operator/(T scalar) const;
     constexpr Vector3<T> operator%(T scalar) const;
 
     Vector3<T> &operator+=(const Vector3<T> &other);
     Vector3<T> &operator-=(const Vector3<T> &other);
+    Vector3<T> &operator+=(T scalar);
+    Vector3<T> &operator-=(T scalar);
     Vector3<T> &operator*=(T scalar);
     Vector3<T> &operator/=(T scalar);
     Vector3<T> &operator%=(T scalar);

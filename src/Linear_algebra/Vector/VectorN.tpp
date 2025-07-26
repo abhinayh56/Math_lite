@@ -89,6 +89,28 @@ inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N> &v1, const
 }
 
 template <typename T, std::size_t N>
+inline constexpr VectorN<T, N> VectorN<T, N>::add(const VectorN<T, N> &v1, T s)
+{
+    VectorN<T, N> result;
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        result.elements[i] = v1.elements[i] + s;
+    }
+    return result;
+}
+
+template <typename T, std::size_t N>
+inline constexpr VectorN<T, N> VectorN<T, N>::sub(const VectorN<T, N> &v1, T s)
+{
+    VectorN<T, N> result;
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        result.elements[i] = v1.elements[i] - s;
+    }
+    return result;
+}
+
+template <typename T, std::size_t N>
 inline constexpr VectorN<T, N> VectorN<T, N>::mul(const VectorN<T, N> &v, T s)
 {
     VectorN<T, N> result;
@@ -218,6 +240,18 @@ constexpr VectorN<T, N> VectorN<T, N>::operator-(const VectorN<T, N> &other) con
 }
 
 template <typename T, std::size_t N>
+constexpr VectorN<T, N> VectorN<T, N>::operator+(T scalar) const
+{
+    return add(*this, scalar);
+}
+
+template <typename T, std::size_t N>
+constexpr VectorN<T, N> VectorN<T, N>::operator-(T scalar) const
+{
+    return sub(*this, scalar);
+}
+
+template <typename T, std::size_t N>
 constexpr VectorN<T, N> VectorN<T, N>::operator*(T scalar) const
 {
     return mul(*this, scalar);
@@ -256,6 +290,26 @@ VectorN<T, N> &VectorN<T, N>::operator-=(const VectorN<T, N> &other)
     for (std::size_t i = 0; i < N; ++i)
     {
         elements[i] -= other.elements[i];
+    }
+    return *this;
+}
+
+template <typename T, std::size_t N>
+VectorN<T, N> &VectorN<T, N>::operator+=(T scalar)
+{
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        elements[i] += scalar;
+    }
+    return *this;
+}
+
+template <typename T, std::size_t N>
+VectorN<T, N> &VectorN<T, N>::operator-=(T scalar)
+{
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        elements[i] -= scalar;
     }
     return *this;
 }

@@ -73,7 +73,19 @@ inline constexpr Vector4<T> Vector4<T>::add(const Vector4<T> &v1, const Vector4<
 template <typename T>
 inline constexpr Vector4<T> Vector4<T>::sub(const Vector4<T> &v1, const Vector4<T> &v2)
 {
-    return Vector4<T>(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z);
+    return Vector4<T>(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z, v1.w - v2.w);
+}
+
+template <typename T>
+inline constexpr Vector4<T> Vector4<T>::add(const Vector4<T> &v1, T s)
+{
+    return Vector4<T>(v1.x + s, v1.y + s, v1.z + s, v1.w + s);
+}
+
+template <typename T>
+inline constexpr Vector4<T> Vector4<T>::sub(const Vector4<T> &v1, T s)
+{
+    return Vector4<T>(v1.x - s, v1.y - s, v1.z - s, v1.w - s);
 }
 
 template <typename T>
@@ -186,6 +198,18 @@ constexpr Vector4<T> Vector4<T>::operator-(const Vector4<T> &other) const
 }
 
 template <typename T>
+constexpr Vector4<T> Vector4<T>::operator+(T scalar) const
+{
+    return Vector4<T>(x + scalar, y + scalar, z + scalar, w + scalar);
+}
+
+template <typename T>
+constexpr Vector4<T> Vector4<T>::operator-(T scalar) const
+{
+    return Vector4<T>(x - scalar, y - scalar, z - scalar, w - scalar);
+}
+
+template <typename T>
 constexpr Vector4<T> Vector4<T>::operator*(T scalar) const
 {
     return Vector4<T>(x * scalar, y * scalar, z * scalar, w * scalar);
@@ -220,6 +244,26 @@ Vector4<T> &Vector4<T>::operator-=(const Vector4<T> &other)
     y -= other.y;
     z -= other.z;
     w -= other.w;
+    return *this;
+}
+
+template <typename T>
+Vector4<T> &Vector4<T>::operator+=(T scalar)
+{
+    x += scalar;
+    y += scalar;
+    z += scalar;
+    w += scalar;
+    return *this;
+}
+
+template <typename T>
+Vector4<T> &Vector4<T>::operator-=(T scalar)
+{
+    x -= scalar;
+    y -= scalar;
+    z -= scalar;
+    w -= scalar;
     return *this;
 }
 
