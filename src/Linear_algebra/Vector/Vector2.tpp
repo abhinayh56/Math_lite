@@ -146,9 +146,9 @@ inline constexpr T Vector2<T>::norm(const Vector2<T> &v)
 }
 
 template <typename T>
-inline constexpr T Vector2<T>::angle(const Vector2<T> &v)
+inline constexpr T Vector2<T>::angle(const Vector2<T> &v1, const Vector2<T> &v2)
 {
-    return std::atan2(v.y, v.x);
+    return std::acos(v.y, v.x);
 }
 
 template <typename T>

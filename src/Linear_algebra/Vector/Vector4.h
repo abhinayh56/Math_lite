@@ -40,6 +40,7 @@ public:
     static inline constexpr T magnitude(const Vector4<T> &v);
     static inline constexpr T length(const Vector4<T> &v);
     static inline constexpr T norm(const Vector4<T> &v);
+    static inline constexpr T angle(const Vector4<T> &v1, const Vector4<T> &v2);
 
     constexpr Vector4<T> operator+() const;
     constexpr Vector4<T> operator-() const;
