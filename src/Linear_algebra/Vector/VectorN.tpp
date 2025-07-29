@@ -172,6 +172,17 @@ inline constexpr VectorN<T, N> VectorN<T, N>::div(T s, const VectorN<T, N> &v)
 }
 
 template <typename T, std::size_t N>
+inline constexpr VectorN<T, N> VectorN<T, N>::pow(const VectorN<T, N> &v, T n)
+{
+    VectorN<T, N> result;
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        result.elements[i] = std::pow(v.elements[i], n);
+    }
+    return result;
+}
+
+template <typename T, std::size_t N>
 inline constexpr T VectorN<T, N>::dot(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
 {
     T result = T(0);

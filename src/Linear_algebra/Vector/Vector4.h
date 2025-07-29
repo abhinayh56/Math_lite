@@ -35,6 +35,7 @@ public:
     static inline constexpr Vector4<T> mul(T s, const Vector4<T> &v);
     static inline constexpr Vector4<T> div(const Vector4<T> &v, T s);
     static inline constexpr Vector4<T> div(T s, const Vector4<T> &v);
+    static inline constexpr Vector4<T> pow(const Vector4<T> &v, T n);
 
     static inline constexpr T dot(const Vector4<T> &v1, const Vector4<T> &v2);
     static inline constexpr Vector4<T> normalize(const Vector4<T> &v);

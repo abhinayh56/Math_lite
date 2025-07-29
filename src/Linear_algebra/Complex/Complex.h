@@ -33,11 +33,11 @@ public:
     static inline constexpr T abs(const Complex<T> &z);
     static inline constexpr T arg(const Complex<T> &z);
     static inline constexpr Complex<T> inv(const Complex<T> &z);
-    static inline constexpr Complex<T> sqrt(const Complex<T> &z);
-    static inline constexpr Complex<T> exp(const Complex<T> &z);
-    static inline constexpr Complex<T> log(const Complex<T> &z);
-    static inline constexpr Complex<T> pow(const Complex<T> &z, T n);
-    static inline constexpr Complex<T> pow(const Complex<T> &z1, const Complex<T> &z2);
+    // static inline constexpr Complex<T> sqrt(const Complex<T> &z);
+    // static inline constexpr Complex<T> exp(const Complex<T> &z);
+    // static inline constexpr Complex<T> log(const Complex<T> &z);
+    // static inline constexpr Complex<T> pow(const Complex<T> &z, T n);
+    // static inline constexpr Complex<T> pow(const Complex<T> &z1, const Complex<T> &z2);
 
     static inline constexpr Complex<T> sin(const Complex<T> &z);
     static inline constexpr Complex<T> cos(const Complex<T> &z);

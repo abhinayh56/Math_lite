@@ -109,6 +109,12 @@ inline constexpr Vector2<T> Vector2<T>::div(T s, const Vector2<T> &v)
 }
 
 template <typename T>
+inline constexpr Vector2<T> Vector2<T>::pow(const Vector2<T> &v, T n)
+{
+    return Vector2<T>(std::pow(v.x, n), std::pow(v.y, n));
+}
+
+template <typename T>
 inline constexpr T Vector2<T>::dot(const Vector2<T> &v1, const Vector2<T> &v2)
 {
     return v1.x * v2.x + v1.y * v2.y;
