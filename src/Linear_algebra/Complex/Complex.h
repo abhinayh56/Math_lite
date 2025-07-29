@@ -17,12 +17,17 @@ public:
     static inline constexpr Complex<T> ones();
 
     static inline constexpr Complex<T> add(const Complex<T> &z1, const Complex<T> &z2);
+    static inline constexpr Complex<T> add(const Complex<T> &z1, T s);
+    static inline constexpr Complex<T> add(T s, const Complex<T> &z1);
     static inline constexpr Complex<T> sub(const Complex<T> &z1, const Complex<T> &z2);
+    static inline constexpr Complex<T> sub(const Complex<T> &z, T s);
+    static inline constexpr Complex<T> sub(T s, const Complex<T> &z);
     static inline constexpr Complex<T> mul(const Complex<T> &z1, const Complex<T> &z2);
     static inline constexpr Complex<T> mul(const Complex<T> &z, T s);
     static inline constexpr Complex<T> mul(T s, const Complex<T> &z);
     static inline constexpr Complex<T> div(const Complex<T> &z1, const Complex<T> &z2);
     static inline constexpr Complex<T> div(const Complex<T> &z, T s);
+    static inline constexpr Complex<T> div(T s, const Complex<T> &z);
 
     static inline constexpr Complex<T> conj(const Complex<T> &z);
     static inline constexpr T abs(const Complex<T> &z);

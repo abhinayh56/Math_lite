@@ -19,7 +19,7 @@ inline constexpr Complex<T> Complex<T>::zero()
 template <typename T>
 inline constexpr Complex<T> Complex<T>::ones()
 {
-    return Complex<T>(1, 0);
+    return Complex<T>(1, 1);
 }
 
 template <typename T>
@@ -29,9 +29,33 @@ inline constexpr Complex<T> Complex<T>::add(const Complex<T> &z1, const Complex<
 }
 
 template <typename T>
+inline constexpr Complex<T> Complex<T>::add(const Complex<T> &z, T s)
+{
+    return Complex<T>(z.real + s, z.imag + s);
+}
+
+template <typename T>
+inline constexpr Complex<T> Complex<T>::add(T s, const Complex<T> &z)
+{
+    return Complex<T>(z.real + s, z.imag + s);
+}
+
+template <typename T>
 inline constexpr Complex<T> Complex<T>::sub(const Complex<T> &z1, const Complex<T> &z2)
 {
     return Complex<T>(z1.real - z2.real, z1.imag - z2.imag);
+}
+
+template <typename T>
+inline constexpr Complex<T> Complex<T>::sub(const Complex<T> &z, T s)
+{
+    return Complex<T>(z.real - s, z.imag - s);
+}
+
+template <typename T>
+inline constexpr Complex<T> Complex<T>::sub(T s, const Complex<T> &z)
+{
+    return Complex<T>(s - z.real, s - z.imag);
 }
 
 template <typename T>
@@ -65,6 +89,13 @@ template <typename T>
 inline constexpr Complex<T> Complex<T>::div(const Complex<T> &z, T s)
 {
     return Complex<T>(z.real / s, z.imag / s);
+}
+
+template <typename T>
+inline constexpr Complex<T> Complex<T>::div(T s, const Complex<T> &z)
+{
+    T denominator = z2.real * z2.real + z2.imag * z2.imag;
+    return Complex<T>(s * z.real / denominator, s * z.imag / denominator);
 }
 
 template <typename T>
