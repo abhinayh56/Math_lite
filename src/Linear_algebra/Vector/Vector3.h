@@ -2,7 +2,7 @@
 #define VECTOR3_H
 
 #include <cmath>
-#include "../Math_general/Math_general.h"
+#include "../../Math_general/Math_general.h"
 
 template <typename T>
 class Vector3

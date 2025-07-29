@@ -3,7 +3,7 @@
 
 #include <cmath>
 #include <cstddef>
-#include "../Math_general/Math_general.h"
+#include "../../Math_general/Math_general.h"
 
 template <typename T, std::size_t N>
 class VectorN
