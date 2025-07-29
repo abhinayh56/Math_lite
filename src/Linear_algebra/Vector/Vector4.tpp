@@ -356,3 +356,21 @@ constexpr bool Vector4<T>::operator!=(const Vector4<T> &other) const
 {
     return (x != other.x) || (y != other.y) || (z != other.z) || (w != other.w);
 }
+
+template <typename T>
+inline constexpr bool Vector4<T>::is_parallel(const Vector4<T> &v1, const Vector4<T> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), 1, tolerance);
+}
+
+template <typename T>
+inline constexpr bool Vector4<T>::is_anti_parallel(const Vector4<T> &v1, const Vector4<T> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), -1, tolerance);
+}
+
+template <typename T>
+inline constexpr bool Vector4<T>::is_orthogonal(const Vector4<T> &v1, const Vector4<T> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), 1.5707963267948966192313216916398, tolerance);
+}

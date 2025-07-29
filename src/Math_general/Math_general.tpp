@@ -205,6 +205,12 @@ inline constexpr T Math_general<T>::apply_deadband2(T x, T deadband)
 }
 
 template <typename T>
+inline constexpr bool Math_general<T>::almost_equal(T x1, T x2, T tolerance)
+{
+	return std::abs(x1 - x2) <= tolerance;
+}
+
+template <typename T>
 inline constexpr T Math_general<T>::rad_2_deg(T x)
 {
 	return RAD_2_DEG(x);

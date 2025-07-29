@@ -21,6 +21,7 @@ public:
 	static inline constexpr T wrap_360(T x);
 	static inline constexpr T apply_deadband(T x, T deadband);
 	static inline constexpr T apply_deadband2(T x, T deadband);
+	static inline constexpr bool almost_equal(T x1, T x2, T tolerance);
 
 	static inline constexpr T rad_2_deg(T x);
 	static inline constexpr T deg_2_rad(T x);

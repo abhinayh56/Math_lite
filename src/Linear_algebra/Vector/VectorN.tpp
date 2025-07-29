@@ -432,3 +432,21 @@ constexpr bool VectorN<T, N>::operator!=(const VectorN<T, N> &other) const
     }
     return false;
 }
+
+template <typename T, std::size_t N>
+inline constexpr bool VectorN<T, N>::is_parallel(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), 1, tolerance);
+}
+
+template <typename T, std::size_t N>
+inline constexpr bool VectorN<T, N>::is_anti_parallel(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), -1, tolerance);
+}
+
+template <typename T, std::size_t N>
+inline constexpr bool VectorN<T, N>::is_orthogonal(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), 1.5707963267948966192313216916398, tolerance);
+}
