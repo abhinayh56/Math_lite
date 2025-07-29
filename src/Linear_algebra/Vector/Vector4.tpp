@@ -156,6 +156,12 @@ inline constexpr T Vector4<T>::norm(const Vector4<T> &v)
 }
 
 template <typename T>
+inline constexpr T Vector4<T>::angle(const Vector4<T> &v1, const Vector4<T> &v2)
+{
+    return std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2)));
+}
+
+template <typename T>
 constexpr Vector4<T> Vector4<T>::operator+() const
 {
     return *this;

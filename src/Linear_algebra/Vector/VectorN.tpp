@@ -208,6 +208,12 @@ inline constexpr T VectorN<T, N>::norm(const VectorN<T, N> &v)
 }
 
 template <typename T, std::size_t N>
+inline constexpr T VectorN<T, N>::angle(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
+{
+    return std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2)));
+}
+
+template <typename T, std::size_t N>
 constexpr VectorN<T, N> VectorN<T, N>::operator+() const
 {
     return *this;

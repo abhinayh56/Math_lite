@@ -154,10 +154,9 @@ inline constexpr T Vector3<T>::norm(const Vector3<T> &v)
 }
 
 template <typename T>
-inline constexpr Vector3<T> Vector3<T>::angle(const Vector3<T> &v)
+inline constexpr T Vector3<T>::angle(const Vector3<T> &v1, const Vector3<T> &v2)
 {
-    T L = std::sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
-    return Vector3<T>(std::acos(v.x / L), std::acos(v.y / L), std::acos(v.z / L));
+    return std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2)));
 }
 
 template <typename T>

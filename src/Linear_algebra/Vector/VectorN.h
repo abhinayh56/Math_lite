@@ -43,6 +43,7 @@ public:
     static inline constexpr T magnitude(const VectorN<T, N> &v);
     static inline constexpr T length(const VectorN<T, N> &v);
     static inline constexpr T norm(const VectorN<T, N> &v);
+    static inline constexpr T angle(const VectorN<T, N> &v1, const VectorN<T, N> &v2);
 
     constexpr VectorN<T, N> operator+() const;
     constexpr VectorN<T, N> operator-() const;
