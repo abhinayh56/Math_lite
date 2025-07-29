@@ -39,12 +39,12 @@ public:
     // static inline constexpr Complex<T> pow(const Complex<T> &z, T n);
     // static inline constexpr Complex<T> pow(const Complex<T> &z1, const Complex<T> &z2);
 
-    static inline constexpr Complex<T> sin(const Complex<T> &z);
-    static inline constexpr Complex<T> cos(const Complex<T> &z);
-    static inline constexpr Complex<T> tan(const Complex<T> &z);
+    // static inline constexpr Complex<T> sin(const Complex<T> &z);
+    // static inline constexpr Complex<T> cos(const Complex<T> &z);
+    // static inline constexpr Complex<T> tan(const Complex<T> &z);
 
-    static inline constexpr Complex<T> fromPolar(T r, T theta);
-    inline constexpr void toPolar(T &r, T &theta) const;
+    // static inline constexpr Complex<T> fromPolar(T r, T theta);
+    // inline constexpr void toPolar(T &r, T &theta) const;
 
     constexpr Complex<T> operator+() const;
     constexpr Complex<T> operator-() const;
@@ -75,9 +75,28 @@ public:
 #include "Complex.tpp"
 
 template <typename T>
+constexpr Complex<T> operator+(T scalar, const Complex<T> &other)
+{
+    return Complex<T>(other.real + scalar, other.imag + scalar);
+}
+
+template <typename T>
+constexpr Complex<T> operator-(T scalar, const Complex<T> &other)
+{
+    return Complex<T>(other.real scalar, other.imag scalar);
+}
+
+template <typename T>
 constexpr Complex<T> operator*(T scalar, const Complex<T> &other)
 {
     return Complex<T>(other.real * scalar, other.imag * scalar);
+}
+
+template <typename T>
+constexpr Complex<T> operator/(T scalar, const Complex<T> &other)
+{
+    T denominator = other.real * other.real + other.imag * other.imag;
+    return Complex<T>(scalar * other.real / denominator, -scalar * other.imag / denominator);
 }
 
 #endif
