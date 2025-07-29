@@ -332,13 +332,13 @@ Vector2<T> &Vector2<T>::normalize()
 }
 
 template <typename T>
-constexpr bool Vector2<T>::operator==(const Vector2<T> &other) const
+constexpr bool Vector2<T>::operator==(const Vector2<T> &other, T tolerance) const
 {
     return (x == other.x) && (y == other.y);
 }
 
 template <typename T>
-constexpr bool Vector2<T>::operator!=(const Vector2<T> &other) const
+constexpr bool Vector2<T>::operator!=(const Vector2<T> &other, T tolerance) const
 {
     return (x != other.x) || (y != other.y);
 }

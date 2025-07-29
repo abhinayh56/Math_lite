@@ -70,8 +70,8 @@ public:
     Vector2<T> &operator=(const Vector2<T> &other);
     Vector2<T> &normalize();
 
-    constexpr bool operator==(const Vector2<T> &other) const;
-    constexpr bool operator!=(const Vector2<T> &other) const;
+    constexpr bool operator==(const Vector2<T> &other, T tolerance) const;
+    constexpr bool operator!=(const Vector2<T> &other, T tolerance) const;
 
     static inline constexpr bool is_parallel(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance);
     static inline constexpr bool is_anti_parallel(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance);
