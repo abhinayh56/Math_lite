@@ -133,6 +133,17 @@ inline constexpr VectorN<T, N> VectorN<T, N>::sub(T s, const VectorN<T, N> &v1)
 }
 
 template <typename T, std::size_t N>
+inline constexpr VectorN<T, N> VectorN<T, N>::mul(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
+{
+    VectorN<T, N> result;
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        result.elements[i] = v1.elements[i] * v2.elements[i];
+    }
+    return result;
+}
+
+template <typename T, std::size_t N>
 inline constexpr VectorN<T, N> VectorN<T, N>::mul(const VectorN<T, N> &v, T s)
 {
     VectorN<T, N> result;
@@ -147,6 +158,17 @@ template <typename T, std::size_t N>
 inline constexpr VectorN<T, N> VectorN<T, N>::mul(T s, const VectorN<T, N> &v)
 {
     return mul(v, s);
+}
+
+template <typename T, std::size_t N>
+inline constexpr VectorN<T, N> VectorN<T, N>::div(const VectorN<T, N> &v1, const VectorN<T, N> &v2)
+{
+    VectorN<T, N> result;
+    for (std::size_t i = 0; i < N; ++i)
+    {
+        result.elements[i] = v1.elements[i] / v2.elements[i];
+    }
+    return result;
 }
 
 template <typename T, std::size_t N>

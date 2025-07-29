@@ -93,6 +93,12 @@ inline constexpr Vector3<T> Vector3<T>::sub(T s, const Vector3<T> &v1)
 }
 
 template <typename T>
+inline constexpr Vector3<T> Vector3<T>::mul(const Vector3<T> &v1, const Vector3<T> &v2)
+{
+    return Vector3<T>(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z);
+}
+
+template <typename T>
 inline constexpr Vector3<T> Vector3<T>::mul(const Vector3<T> &v, T s)
 {
     return Vector3<T>(v.x * s, v.y * s, v.z * s);
@@ -102,6 +108,12 @@ template <typename T>
 inline constexpr Vector3<T> Vector3<T>::mul(T s, const Vector3<T> &v)
 {
     return Vector3<T>(v.x * s, v.y * s, v.z * s);
+}
+
+template <typename T>
+inline constexpr Vector3<T> Vector3<T>::div(const Vector3<T> &v1, const Vector3<T> &v2)
+{
+    return Vector3<T>(v1.x / v2.x, v1.y / v2.y, v1.z / v2.z);
 }
 
 template <typename T>
