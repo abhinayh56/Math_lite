@@ -75,9 +75,9 @@ public:
     constexpr bool operator==(const VectorN<T, N> &other) const;
     constexpr bool operator!=(const VectorN<T, N> &other) const;
 
-    static inline constexpr bool is_parallel(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance = T(0.0));
-    static inline constexpr bool is_anti_parallel(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance = T(0.0));
-    static inline constexpr bool is_orthogonal(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance = T(0.0));
+    static inline constexpr bool is_parallel(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance);
+    static inline constexpr bool is_anti_parallel(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance);
+    static inline constexpr bool is_orthogonal(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance);
 };
 
 #include "VectorN.tpp"

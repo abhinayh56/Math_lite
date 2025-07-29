@@ -71,9 +71,9 @@ public:
     constexpr bool operator==(const Vector3<T> &other) const;
     constexpr bool operator!=(const Vector3<T> &other) const;
 
-    static inline constexpr bool is_parallel(const Vector3<T> &v1, const Vector3<T> &v2, T tolerance = T(0.0));
-    static inline constexpr bool is_anti_parallel(const Vector3<T> &v1, const Vector3<T> &v2, T tolerance = T(0.0));
-    static inline constexpr bool is_orthogonal(const Vector3<T> &v1, const Vector3<T> &v2, T tolerance = T(0.0));
+    static inline constexpr bool is_parallel(const Vector3<T> &v1, const Vector3<T> &v2, T tolerance);
+    static inline constexpr bool is_anti_parallel(const Vector3<T> &v1, const Vector3<T> &v2, T tolerance);
+    static inline constexpr bool is_orthogonal(const Vector3<T> &v1, const Vector3<T> &v2, T tolerance);
 };
 
 #include "Vector3.tpp"
