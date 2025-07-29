@@ -16,11 +16,11 @@ void disp(std::string s, VectorN<T, N> v)
 
 int main()
 {
-    VectorN<float, 3> v1 = {12.3, 12.56, 612.78};
+    VectorN<float, 6> v1 = {12.3, 12.56, 612.78, 14, 23, 7789};
+    disp<float, 6>("v1", v1);
 
-    v1 = {12.3, 12.56, 612.78};
-
-    disp<float, 3>("v1", v1);
+    v1 = {12.3, 12.56, 612.78, 56, 778, 313232};
+    // disp<float, 6>("v1", v1);
 
     return 0;
 }

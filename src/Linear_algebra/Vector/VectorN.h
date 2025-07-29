@@ -4,7 +4,7 @@
 #include <cmath>
 #include <cstddef>
 #include "../../Math_general/Math_general.h"
-
+#include <iostream>
 template <typename T, std::size_t N>
 class VectorN
 {
@@ -17,6 +17,7 @@ public:
     template <typename... Args>
     constexpr VectorN(Args... elements_) : elements{static_cast<T>(elements_)...}
     {
+        std::cout << "11111\n";
         static_assert(sizeof...(Args) == N, "Number of arguments must be equal to N");
     }
 
