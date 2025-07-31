@@ -2,6 +2,7 @@
 #define VECTOR4_H
 
 #include <cmath>
+#include <type_traits>
 #include "../../Math_general/Math_general.h"
 
 template <typename T>
@@ -71,8 +72,8 @@ public:
     Vector4<T> &operator=(const Vector4<T> &other);
     Vector4<T> &normalize();
 
-    constexpr bool operator==(const Vector4<T> &other, T tolerance) const;
-    constexpr bool operator!=(const Vector4<T> &other, T tolerance) const;
+    constexpr bool operator==(const Vector4<T> &other) const;
+    constexpr bool operator!=(const Vector4<T> &other) const;
 
     static inline constexpr bool is_parallel(const Vector4<T> &v1, const Vector4<T> &v2, T tolerance);
     static inline constexpr bool is_anti_parallel(const Vector4<T> &v1, const Vector4<T> &v2, T tolerance);
