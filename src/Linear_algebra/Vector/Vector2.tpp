@@ -332,15 +332,37 @@ Vector2<T> &Vector2<T>::normalize()
 }
 
 template <typename T>
-constexpr bool Vector2<T>::operator==(const Vector2<T> &other, T tolerance) const
+constexpr bool Vector2<T>::operator==(const Vector2<T> &other) const
 {
-    return (x == other.x) && (y == other.y);
+    if (std::is_same<T, float>::value)
+    {
+        return Math_general<T>::almost_equal(x, other.x, 1e-5) && Math_general<T>::almost_equal(y, other.y, 1e-5);
+    }
+    else if (std::is_same<T, double>::value)
+    {
+        return Math_general<T>::almost_equal(x, other.x, 1e-7) && Math_general<T>::almost_equal(y, other.y, 1e-7);
+    }
+    else
+    {
+        return (x == other.x) && (y == other.y);
+    }
 }
 
 template <typename T>
-constexpr bool Vector2<T>::operator!=(const Vector2<T> &other, T tolerance) const
+constexpr bool Vector2<T>::operator!=(const Vector2<T> &other) const
 {
-    return (x != other.x) || (y != other.y);
+    if (std::is_same<T, float>::value)
+    {
+        return (~Math_general<T>::almost_equal(x, other.x, 1e-5)) || (~Math_general<T>::almost_equal(y, other.y, 1e-5));
+    }
+    else if (std::is_same<T, double>::value)
+    {
+        return (~Math_general<T>::almost_equal(x, other.x, 1e-7)) || (~Math_general<T>::almost_equal(y, other.y, 1e-7));
+    }
+    else
+    {
+        return (~(x == other.x)) || (~(y == other.y));
+    }
 }
 
 template <typename T>
