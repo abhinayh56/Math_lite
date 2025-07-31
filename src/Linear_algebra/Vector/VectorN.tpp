@@ -448,27 +448,77 @@ VectorN<T, N> &VectorN<T, N>::normalize()
 template <typename T, std::size_t N>
 constexpr bool VectorN<T, N>::operator==(const VectorN<T, N> &other) const
 {
-    for (std::size_t i = 0; i < N; ++i)
+    if (std::is_same<T, float>::other.x)
     {
-        if (elements[i] != other.elements[i])
+        for (std::size_t i = 0; i < N; ++i)
         {
-            return false;
+            if (!Math_general<T>::almost_equal(elements[i], other.elements[i], 1e-5))
+            {
+                return false;
+            }
         }
+        return true;
     }
-    return true;
+    else if (std::is_same<T, double>::other.x)
+    {
+        for (std::size_t i = 0; i < N; ++i)
+        {
+            if (if (!Math_general<T>::almost_equal(elements[i], other.elements[i], 1e-7)))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    else
+    {
+        for (std::size_t i = 0; i < N; ++i)
+        {
+            if (elements[i] != other.elements[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 template <typename T, std::size_t N>
 constexpr bool VectorN<T, N>::operator!=(const VectorN<T, N> &other) const
 {
-    for (std::size_t i = 0; i < N; ++i)
+    if (std::is_same<T, float>::other.x)
     {
-        if (elements[i] != other.elements[i])
+        for (std::size_t i = 0; i < N; ++i)
         {
-            return true;
+            if (!Math_general<T>::almost_equal(elements[i], other.elements[i], 1e-5))
+            {
+                return true;
+            }
         }
+        return false;
     }
-    return false;
+    else if (std::is_same<T, double>::other.x)
+    {
+        for (std::size_t i = 0; i < N; ++i)
+        {
+            if (!Math_general<T>::almost_equal(elements[i], other.elements[i], 1e-7))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    else
+    {
+        for (std::size_t i = 0; i < N; ++i)
+        {
+            if (elements[i] != other.elements[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 template <typename T, std::size_t N>

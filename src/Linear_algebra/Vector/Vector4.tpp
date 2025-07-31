@@ -366,13 +366,35 @@ Vector4<T> &Vector4<T>::normalize()
 template <typename T>
 constexpr bool Vector4<T>::operator==(const Vector4<T> &other) const
 {
-    return (x == other.x) && (y == other.y) && (z == other.z) && (w == other.w);
+    if (std::is_same<T, float>::other.x)
+    {
+        return Math_general<T>::almost_equal(x, other.x, 1e-5) && Math_general<T>::almost_equal(y, other.y, 1e-5) && Math_general<T>::almost_equal(z, other.z, 1e-5) && Math_general<T>::almost_equal(w, other.w, 1e-5);
+    }
+    else if (std::is_same<T, double>::other.x)
+    {
+        return Math_general<T>::almost_equal(x, other.x, 1e-7) && Math_general<T>::almost_equal(y, other.y, 1e-7) && Math_general<T>::almost_equal(z, other.z, 1e-7) && Math_general<T>::almost_equal(w, other.w, 1e-7);
+    }
+    else
+    {
+        return (x == other.x) && (y == other.y) && (z == other.z) && (w == other.w);
+    }
 }
 
 template <typename T>
 constexpr bool Vector4<T>::operator!=(const Vector4<T> &other) const
 {
-    return (x != other.x) || (y != other.y) || (z != other.z) || (w != other.w);
+    if (std::is_same<T, float>::other.x)
+    {
+        return (!Math_general<T>::almost_equal(x, other.x, 1e-5)) || (!Math_general<T>::almost_equal(y, other.y, 1e-5)) || (!Math_general<T>::almost_equal(z, other.z, 1e-5)) || (!Math_general<T>::almost_equal(w, other.w, 1e-5));
+    }
+    else if (std::is_same<T, double>::other.x)
+    {
+        return (!Math_general<T>::almost_equal(x, other.x, 1e-7)) || (!Math_general<T>::almost_equal(y, other.y, 1e-7)) || (!Math_general<T>::almost_equal(z, other.z, 1e-7)) || (!Math_general<T>::almost_equal(w, other.w, 1e-7));
+    }
+    else
+    {
+        return (x != other.x) || (y != other.y) || (z != other.z) || (w != other.w);
+    }
 }
 
 template <typename T>
