@@ -1,0 +1,106 @@
+math_lite/
+└── Geometry/
+    ├── Conics/
+    │   ├── Circle/
+    │   │   ├── Circle.h
+    │   │   ├── Circle2D.h
+    │   │   ├── Circle2D.tpp
+    │   │   ├── Circle3D.h
+    │   │   └── Circle3D.tpp
+    │   ├── Conics.h
+    │   ├── Ellipse/
+    │   │   ├── Ellipse.h
+    │   │   ├── Ellipse2D.h
+    │   │   ├── Ellipse2D.tpp
+    │   │   ├── Ellipse3D.h
+    │   │   └── Ellipse3D.tpp
+    │   ├── Hyperbola/
+    │   │   ├── Hyperbola.h
+    │   │   ├── Hyperbola2D.h
+    │   │   ├── Hyperbola2D.tpp
+    │   │   ├── Hyperbola3D.h
+    │   │   └── Hyperbola3D.tpp
+    │   └── Parabola/
+    │       ├── Parabola.h
+    │       ├── Parabola2D.h
+    │       ├── Parabola2D.tpp
+    │       ├── Parabola3D.h
+    │       └── Parabola3D.tpp
+    ├── Curves/
+    │   ├── Curves.h
+    │   └── Spline.h
+    ├── Dual_quaternion/
+    │   ├── Dual_quaternion.h
+    │   └── Dual_quaternion.tpp
+    ├── Foundation/
+    │   ├── Foundation.h
+    │   ├── Line/
+    │   │   ├── Line.h
+    │   │   ├── Line2D.h
+    │   │   ├── Line2D.tpp
+    │   │   ├── Line3D.h
+    │   │   ├── Line3D.tpp
+    │   │   ├── LineND.h
+    │   │   └── LineND.tpp
+    │   ├── Point/
+    │   │   ├── Point.h
+    │   │   ├── Point1D.h
+    │   │   ├── Point1D.tpp
+    │   │   ├── Point2D.h
+    │   │   ├── Point2D.tpp
+    │   │   ├── Point3D.h
+    │   │   ├── Point3D.tpp
+    │   │   ├── PointND.h
+    │   │   └── PointND.tpp
+    │   └── Ray/
+    │       ├── Ray.h
+    │       ├── Ray2D.h
+    │       ├── Ray2D.tpp
+    │       ├── Ray3D.h
+    │       ├── Ray3D.tpp
+    │       ├── RayND.h
+    │       └── RayND.tpp
+    ├── Geometry.h
+    ├── Quaternion/
+    │   ├── Quaternion.h
+    │   └── Quaternion.tpp
+    ├── Shapes/
+    │   ├── Hexagon.h
+    │   ├── Octagon.h
+    │   ├── Parallelogram.h
+    │   ├── Pentagon.h
+    │   ├── Polygon.h
+    │   ├── Quadrilateral.h
+    │   ├── Rectangle.h
+    │   ├── Rhombous.h
+    │   ├── Septagon.h
+    │   ├── Shapes.h
+    │   ├── Square.h
+    │   ├── Trapezium.h
+    │   └── Triangle.h
+    └── Surfaces/
+        ├── Cylinder/
+        │   ├── Cylinder.h
+        │   └── Cylinder.tpp
+        ├── Ellipsoid/
+        │   ├── Ellipsoid.h
+        │   └── Ellipsoid.tpp
+        ├── Hyperboloid/
+        │   ├── Hyperboloid.h
+        │   └── Hyperboloid.tpp
+        ├── Paraboloid/
+        │   ├── Paraboloid.h
+        │   └── Paraboloid.tpp
+        ├── Plane/
+        │   ├── Plane.h
+        │   ├── Plane3D.h
+        │   ├── Plane3D.tpp
+        │   ├── PlaneND.h
+        │   └── PlaneND.tpp
+        ├── Sphere/
+        │   ├── Sphere.h
+        │   └── Sphere.tpp
+        ├── Surfaces.h
+        └── Trapezoid/
+            ├── Trapezoid.h
+            └── Trapezoid.tpp
