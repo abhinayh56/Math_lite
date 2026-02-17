@@ -44,7 +44,6 @@ def write_filtered_tree(root_path, output_file):
 
         prefix = "    " if is_last else "│   "
         build_tree(full_path, prefix)
-        print(full_path)
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
