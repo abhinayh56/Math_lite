@@ -1,134 +1,142 @@
-└── geometry/
-    ├── geometry.h
-    ├── conics/
-    │   ├── circle/
-    │   │   ├── circle.h
-    │   │   ├── circle_2d.h
-    │   │   └── circle_3d.h
-    │   ├── conics.h
-    │   ├── ellipse/
-    │   │   ├── ellipse.h
-    │   │   ├── ellipse_2d.h
-    │   │   └── ellipse_3d.h
-    │   ├── hyperbola/
-    │   │   ├── hyperbola.h
-    │   │   ├── hyperbola_2d.h
-    │   │   └── hyperbola_3d.h
-    │   └── parabola/
-    │       ├── parabola.h
-    │       ├── parabola_2d.h
-    │       └── parabola_3d.h
-    ├── curves/
-    │   ├── curves.h
-    │   └── spline.h
-    ├── foundation/
-    │   ├── foundation.h
-    │   ├── line/
-    │   │   ├── line.h
-    │   │   ├── line_2d.h
-    │   │   ├── line_3d.h
-    │   │   └── line_nd.h
-    │   ├── point/
-    │   │   ├── point.h
-    │   │   ├── point_1d.h
-    │   │   ├── point_2d.h
-    │   │   ├── point_3d.h
-    │   │   └── point_nd.h
-    │   └── ray/
-    │       ├── ray.h
-    │       ├── ray_2d.h
-    │       ├── ray_3d.h
-    │       └── ray_nd.h
-    ├── shapes/
-    │   ├── hexagon.h
-    │   ├── octagon.h
-    │   ├── parallelogram.h
-    │   ├── pentagon.h
-    │   ├── polygon.h
-    │   ├── quadrilateral.h
-    │   ├── rectangle.h
-    │   ├── rhombous.h
-    │   ├── septagon.h
-    │   ├── shapes.h
-    │   ├── square.h
-    │   ├── trapezium.h
-    │   └── triangle.h
-    └── surfaces/
-        ├── cylinder/
-        │   └── cylinder.h
-        ├── ellipsoid/
-        │   └── ellipsoid.h
-        ├── hyperboloid/
-        │   └── hyperboloid.h
-        ├── paraboloid/
-        │   └── paraboloid.h
-        ├── plane/
-        │   ├── plane.h
-        │   ├── plane_3d.h
-        │   └── plane_nd.h
-        ├── sphere/
-        │   └── sphere.h
-        ├── surfaces.h
-        └── trapezoid/
-            └── trapezoid.h
+geometry/
+├── quaternion/
+│   └── quaternion.h
+├── dual_quaternion/
+│   └── dual_quaternion.h
+├── geometry.h
+├── foundation/
+│   ├── foundation.h
+│   ├── line/
+│   │   ├── line.h
+│   │   ├── line_2d.h
+│   │   ├── line_3d.h
+│   │   └── line_nd.h
+│   ├── point/
+│   │   ├── point.h
+│   │   ├── point_1d.h
+│   │   ├── point_2d.h
+│   │   ├── point_3d.h
+│   │   └── point_nd.h
+│   └── ray/
+│       ├── ray.h
+│       ├── ray_2d.h
+│       ├── ray_3d.h
+│       └── ray_nd.h
+├── shapes/
+│   ├── shapes.h
+│   ├── hexagon.h
+│   ├── octagon.h
+│   ├── parallelogram.h
+│   ├── pentagon.h
+│   ├── polygon.h
+│   ├── quadrilateral.h
+│   ├── rectangle.h
+│   ├── rhombous.h
+│   ├── septagon.h
+│   ├── square.h
+│   ├── trapezium.h
+│   └── triangle.h
+├── conics/
+│   ├── circle/
+│   │   ├── circle.h
+│   │   ├── circle_2d.h
+│   │   └── circle_3d.h
+│   ├── conics.h
+│   ├── ellipse/
+│   │   ├── ellipse.h
+│   │   ├── ellipse_2d.h
+│   │   └── ellipse_3d.h
+│   ├── hyperbola/
+│   │   ├── hyperbola.h
+│   │   ├── hyperbola_2d.h
+│   │   └── hyperbola_3d.h
+│   └── parabola/
+│       ├── parabola.h
+│       ├── parabola_2d.h
+│       └── parabola_3d.h
+├── curves/
+│   ├── curves.h
+│   └── spline.h
+└── surfaces/
+    ├── cylinder/
+    │   └── cylinder.h
+    ├── ellipsoid/
+    │   └── ellipsoid.h
+    ├── hyperboloid/
+    │   └── hyperboloid.h
+    ├── paraboloid/
+    │   └── paraboloid.h
+    ├── plane/
+    │   ├── plane.h
+    │   ├── plane_3d.h
+    │   └── plane_nd.h
+    ├── sphere/
+    │   └── sphere.h
+    ├── surfaces.h
+    └── trapezoid/
+        └── trapezoid.h
 
-└── geometry/
-    ├── conics/
-    │   ├── circle/
-    │   │   ├── circle_2d.tpp
-    │   │   └── circle_3d.tpp
-    │   ├── ellipse/
-    │   │   ├── ellipse_2d.tpp
-    │   │   └── ellipse_3d.tpp
-    │   ├── hyperbola/
-    │   │   ├── hyperbola_2d.tpp
-    │   │   └── hyperbola_3d.tpp
-    │   └── parabola/
-    │       ├── parabola_2d.tpp
-    │       └── parabola_3d.tpp
-    ├── curves/
-    │   └── spline.tpp
-    ├── foundation/
-    │   ├── line/
-    │   │   ├── line_2d.tpp
-    │   │   ├── line_3d.tpp
-    │   │   └── line_nd.tpp
-    │   ├── point/
-    │   │   ├── point_1d.tpp
-    │   │   ├── point_2d.tpp
-    │   │   ├── point_3d.tpp
-    │   │   └── point_nd.tpp
-    │   └── ray/
-    │       ├── ray_2d.tpp
-    │       ├── ray_3d.tpp
-    │       └── ray_nd.tpp
-    ├── shapes/
-    │   ├── hexagon.tpp
-    │   ├── octagon.tpp
-    │   ├── parallelogram.tpp
-    │   ├── pentagon.tpp
-    │   ├── polygon.tpp
-    │   ├── quadrilateral.tpp
-    │   ├── rectangle.tpp
-    │   ├── rhombous.tpp
-    │   ├── septagon.tpp
-    │   ├── shapes.tpp
-    │   ├── square.tpp
-    │   ├── trapezium.tpp
-    │   └── triangle.tpp
-    └── surfaces/
-        ├── cylinder/
-        │   └── cylinder.tpp
-        ├── ellipsoid/
-        │   └── ellipsoid.tpp
-        ├── hyperboloid/
-        │   └── hyperboloid.tpp
-        ├── paraboloid/
-        │   └── paraboloid.tpp
-        ├── plane/
-        │   ├── plane_3d.tpp
-        │   └── plane_nd.tpp
-        ├── sphere/
-        │   └── sphere.tpp
-        └── trapezoid/
-            └── trapezoid.tpp
+geometry/
+├── quaternion/
+│   └── quaternion.tpp
+├── dual_quaternion/
+│   └── dual_quaternion.tpp
+├── foundation/
+│   ├── line/
+│   │   ├── line_2d.tpp
+│   │   ├── line_3d.tpp
+│   │   └── line_nd.tpp
+│   ├── point/
+│   │   ├── point_1d.tpp
+│   │   ├── point_2d.tpp
+│   │   ├── point_3d.tpp
+│   │   └── point_nd.tpp
+│   └── ray/
+│       ├── ray_2d.tpp
+│       ├── ray_3d.tpp
+│       └── ray_nd.tpp
+├── shapes/
+│   ├── hexagon.tpp
+│   ├── octagon.tpp
+│   ├── parallelogram.tpp
+│   ├── pentagon.tpp
+│   ├── polygon.tpp
+│   ├── quadrilateral.tpp
+│   ├── rectangle.tpp
+│   ├── rhombous.tpp
+│   ├── septagon.tpp
+│   ├── shapes.tpp
+│   ├── square.tpp
+│   ├── trapezium.tpp
+│   └── triangle.tpp
+├── conics/
+│   ├── circle/
+│   │   ├── circle_2d.tpp
+│   │   └── circle_3d.tpp
+│   ├── ellipse/
+│   │   ├── ellipse_2d.tpp
+│   │   └── ellipse_3d.tpp
+│   ├── hyperbola/
+│   │   ├── hyperbola_2d.tpp
+│   │   └── hyperbola_3d.tpp
+│   └── parabola/
+│       ├── parabola_2d.tpp
+│       └── parabola_3d.tpp
+├── curves/
+│   └── spline.tpp
+└── surfaces/
+    ├── cylinder/
+    │   └── cylinder.tpp
+    ├── ellipsoid/
+    │   └── ellipsoid.tpp
+    ├── hyperboloid/
+    │   └── hyperboloid.tpp
+    ├── paraboloid/
+    │   └── paraboloid.tpp
+    ├── plane/
+    │   ├── plane_3d.tpp
+    │   └── plane_nd.tpp
+    ├── sphere/
+    │   └── sphere.tpp
+    └── trapezoid/
+        └── trapezoid.tpp
