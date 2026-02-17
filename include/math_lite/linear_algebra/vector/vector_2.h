@@ -1,9 +1,9 @@
-#ifndef VECTOR2_H
-#define VECTOR2_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_2_H
+#define MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_2_H
 
 #include <cmath>
 #include <type_traits>
-#include "../../Math_general/Math_general.h"
+#include "../../math_general/math_general.h"
 
 template <typename T>
 class Vector2
@@ -79,7 +79,7 @@ public:
     static inline constexpr bool is_orthogonal(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance);
 };
 
-#include "Vector2.tpp"
+#include "vector_2.tpp"
 
 template <typename T>
 constexpr Vector2<T> operator+(T scalar, const Vector2<T> &v)

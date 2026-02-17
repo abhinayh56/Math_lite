@@ -1,5 +1,5 @@
-#ifndef MATRIXMN_H
-#define MATRIXMN_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_MN_H
+#define MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_MN_H
 
 #include <cmath>
 #include <array>
@@ -69,6 +69,6 @@ public:
     bool isSymmetric() const;
 };
 
-#include "MatrixMN.tpp"
+#include "matrix_mn.tpp"
 
 #endif

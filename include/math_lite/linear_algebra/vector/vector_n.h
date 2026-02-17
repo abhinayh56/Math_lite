@@ -1,10 +1,10 @@
-#ifndef VECTORN_H
-#define VECTORN_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_N_H
+#define MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_N_H
 
 #include <cmath>
 #include <cstddef>
 #include <type_traits>
-#include "../../Math_general/Math_general.h"
+#include "../../math_general/math_general.h"
 #include <iostream>
 template <typename T, std::size_t N>
 class VectorN

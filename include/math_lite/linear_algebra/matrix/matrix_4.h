@@ -1,5 +1,5 @@
-#ifndef MATRIX4_H
-#define MATRIX4_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_4_H
+#define MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_4_H
 
 #include <cmath>
 
@@ -68,6 +68,6 @@ public:
     bool isSymmetric() const;
 };
 
-#include "Matrix4.tpp"
+#include "matrix_4.tpp"
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef MATRIX3_H
-#define MATRIX3_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_3_H
+#define MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_3_H
 
 #include <cmath>
 
@@ -71,6 +71,6 @@ public:
     // constexpr T operator()(int row, int col) const;
 };
 
-#include "Matrix3.tpp"
+#include "matrix_3.tpp"
 
 #endif

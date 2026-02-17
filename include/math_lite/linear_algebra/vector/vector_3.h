@@ -1,9 +1,9 @@
-#ifndef VECTOR3_H
-#define VECTOR3_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_3_H
+#define MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_3_H
 
 #include <cmath>
 #include <type_traits>
-#include "../../Math_general/Math_general.h"
+#include "../../math_general/math_general.h"
 
 template <typename T>
 class Vector3

@@ -1,9 +1,9 @@
-#ifndef VECTOR4_H
-#define VECTOR4_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_4_H
+#define MATH_LITE_LINEAR_ALGEBRA_VECTOR_VECTOR_4_H
 
 #include <cmath>
 #include <type_traits>
-#include "../../Math_general/Math_general.h"
+#include "../../math_general/math_general.h"
 
 template <typename T>
 class Vector4

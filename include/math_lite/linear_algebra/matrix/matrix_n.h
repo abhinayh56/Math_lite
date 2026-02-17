@@ -1,5 +1,5 @@
-#ifndef MATRIXM_H
-#define MATRIXM_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_N_H
+#define MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_N_H
 
 #include <cmath>
 
@@ -66,6 +66,6 @@ public:
     static constexpr size_t size() { return N; }
 };
 
-#include "MatrixN.tpp"
+#include "matrix_n.tpp"
 
 #endif

@@ -72,7 +72,7 @@ public:
     constexpr bool operator!=(const Complex<T> &other) const;
 };
 
-#include "Complex.tpp"
+#include "complex.tpp"
 
 template <typename T>
 constexpr Complex<T> operator+(T scalar, const Complex<T> &other)

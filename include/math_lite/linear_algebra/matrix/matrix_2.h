@@ -1,5 +1,5 @@
-#ifndef MATRIX2_H
-#define MATRIX2_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_2_H
+#define MATH_LITE_LINEAR_ALGEBRA_MATRIX_MATRIX_2_H
 
 #include <cmath>
 
@@ -71,6 +71,6 @@ public:
     constexpr T operator()(int row, int col) const;
 };
 
-#include "Matrix2.tpp"
+#include "matrix_2.tpp"
 
 #endif
