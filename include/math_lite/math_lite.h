@@ -1,11 +1,11 @@
 #ifndef MATH_LITE_H
 #define MATH_LITE_H
 
-#include "Math_general/Math_general.h"
-#include "Linear_algebra/Linear_algebra.h"
-#include "Geometry/Geometry.h"
-#include "Calculus/Calculus.h"
-#include "Probability/Probability.h"
-#include "Statistics/Statistics.h"
+#include "math_general/math_general.h"
+#include "linear_algebra/linear_algebra.h"
+#include "geometry/geometry.h"
+#include "calculus/calculus.h"
+#include "probability/probability.h"
+#include "statistics/statistics.h"
 
 #endif

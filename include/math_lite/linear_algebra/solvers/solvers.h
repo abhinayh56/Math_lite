@@ -1,9 +1,14 @@
-#include "LUD.h"
-#include "SVD.h"
-#include "QRD.h"
-#include "EigenD.h"
-#include "CholeskyD.h"
-#include "Linear_solver.h"
-#include "Least_square_solver.h"
-#include "Gaussian_elimination.h"
-#include "Conjugate_gradient_solver.h"
+#ifndef MATH_LITE_LINEAR_ALGEBRA_SOLVERS_H
+#define MATH_LITE_LINEAR_ALGEBRA_SOLVERS_H
+
+#include "lud.h"
+#include "svd.h"
+#include "qrd.h"
+#include "eigen_d.h"
+#include "cholesky_d.h"
+#include "linear_solver.h"
+#include "least_square_solver.h"
+#include "gaussian_elimination.h"
+#include "conjugate_gradient_solver.h"
+
+#endif

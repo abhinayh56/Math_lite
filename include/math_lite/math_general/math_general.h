@@ -1,5 +1,5 @@
-#ifndef MATH_GENERAL_H
-#define MATH_GENERAL_H
+#ifndef MATH_LITE_MATH_GENERAL_H
+#define MATH_LITE_MATH_GENERAL_H
 
 #include "constants.h"
 #include <cmath>
@@ -50,6 +50,6 @@ public:
 	static inline constexpr T fast_inv_sqrt(T number);
 };
 
-#include "Math_general.tpp"
+#include "math_general.tpp"
 
 #endif

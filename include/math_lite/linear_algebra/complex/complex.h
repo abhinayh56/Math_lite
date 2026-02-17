@@ -1,5 +1,5 @@
-#ifndef COMPLEX_H
-#define COMPLEX_H
+#ifndef MATH_LITE_LINEAR_ALGEBRA_COMPLEX_H
+#define MATH_LITE_LINEAR_ALGEBRA_COMPLEX_H
 
 #include <cmath>
 
