@@ -1,5 +1,5 @@
-#ifndef POINT3D_H
-#define POINT3D_H
+#ifndef MATH_LITE_GEOMETRY_FOUNDATION_POINT_POINT_3D_H
+#define MATH_LITE_GEOMETRY_FOUNDATION_POINT_POINT_3D_H
 
 template <typename T>
 class Point3D
@@ -13,6 +13,6 @@ public:
     constexpr Point3D(T x, T y, T z);
 };
 
-#include "Point3D.tpp"
+#include "point_3d.tpp"
 
 #endif

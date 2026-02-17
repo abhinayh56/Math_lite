@@ -1,0 +1,5 @@
+#ifndef MATH_LITE_GEOMETRY_CURVES
+#define MATH_LITE_GEOMETRY_CURVES
+
+
+#endif

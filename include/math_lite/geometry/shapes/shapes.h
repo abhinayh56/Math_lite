@@ -1,0 +1,4 @@
+#ifndef MATH_LITE_GEOMETRY_SHAPES
+#define MATH_LITE_GEOMETRY_SHAPES
+
+#endif

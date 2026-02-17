@@ -1,5 +1,5 @@
-#ifndef POINTND_H
-#define POINTND_H
+#ifndef MATH_LITE_GEOMETRY_FOUNDATION_POINT_POINT_ND_H
+#define MATH_LITE_GEOMETRY_FOUNDATION_POINT_POINT_ND_H
 
 #include <cstddef>
 
@@ -9,11 +9,11 @@ class PointND
 public:
     T coordinates[N];
 
-    //Constructors
+    // Constructors
     constexpr PointND();
-    constexpr PointND(const T* coordinates_);
+    constexpr PointND(const T *coordinates_);
 };
 
-#include "PointND.tpp"
+#include "point_nd.tpp"
 
 #endif

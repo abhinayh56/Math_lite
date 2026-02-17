@@ -1,8 +1,8 @@
-#ifndef LINE2D_H
-#define LINE2D_H
+#ifndef MATH_LITE_GEOMETRY_FOUNDATION_LINE_LINE_2D_H
+#define MATH_LITE_GEOMETRY_FOUNDATION_LINE_LINE_2D_H
 
-#include "../Point/Point2D.h"
-#include "../../../Linear_algebra/Vector/Vector2.h"
+#include "../point/point_2d.h"
+#include "../../../linear_algebra/vector/vector_2.h"
 
 template <typename T>
 class Line2D
@@ -22,6 +22,6 @@ public:
     bool is_intersecting(const Line2D<T>& l2) const;
 };
 
-#include "Line2D.tpp"
+#include "line_2d.tpp"
 
 #endif

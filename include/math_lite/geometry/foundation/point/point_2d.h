@@ -1,5 +1,5 @@
-#ifndef POINT2D_H
-#define POINT2D_H
+#ifndef MATH_LITE_GEOMETRY_FOUNDATION_POINT_POINT_2D_H
+#define MATH_LITE_GEOMETRY_FOUNDATION_POINT_POINT_2D_H
 
 template <typename T>
 class Point2D
@@ -10,9 +10,9 @@ public:
 
     constexpr Point2D();
     constexpr Point2D(T x, T y);
-    static inline constexpr T distance(const Point2D<T>& p1, const Point2D<T>& p2);
+    static inline constexpr T distance(const Point2D<T> &p1, const Point2D<T> &p2);
 };
 
-#include "Point2D.tpp"
+#include "point_2d.tpp"
 
 #endif
