@@ -1,24 +1,24 @@
-#ifndef FILTERS_VERSION_H
-#define FILTERS_VERSION_H
+#ifndef MATH_LITE_VERSION_H
+#define MATH_LITE_VERSION_H
 
-#define FILTERS_VERSION_MAJOR 1
-#define FILTERS_VERSION_MINOR 0
-#define FILTERS_VERSION_PATCH 0
+#define MATH_LITE_VERSION_MAJOR 1
+#define MATH_LITE_VERSION_MINOR 0
+#define MATH_LITE_VERSION_PATCH 0
 
-#define FILTERS_VERSION (FILTERS_VERSION_MAJOR * 10000 + FILTERS_VERSION_MINOR * 100 + FILTERS_VERSION_PATCH)
+#define MATH_LITE_VERSION (MATH_LITE_VERSION_MAJOR * 10000 + MATH_LITE_VERSION_MINOR * 100 + MATH_LITE_VERSION_PATCH)
 
-#define FILTERS_STRINGIFY_HELPER(x) #x
-#define FILTERS_STRINGIFY(x) FILTERS_STRINGIFY_HELPER(x)
+#define STRINGIFY_HELPER(x) #x
+#define STRINGIFY(x) STRINGIFY_HELPER(x)
 
-#define FILTERS_VERSION_STRING FILTERS_STRINGIFY(FILTERS_VERSION_MAJOR) "." FILTERS_STRINGIFY(FILTERS_VERSION_MINOR) "." FILTERS_STRINGIFY(FILTERS_VERSION_PATCH)
+#define MATH_LITE_VERSION_STRING STRINGIFY(MATH_LITE_VERSION_MAJOR) "." STRINGIFY(MATH_LITE_VERSION_MINOR) "." STRINGIFY(MATH_LITE_VERSION_PATCH)
 
-namespace filters
+namespace MATH_LITE
 {
-    inline constexpr int version_major = FILTERS_VERSION_MAJOR;
-    inline constexpr int version_minor = FILTERS_VERSION_MINOR;
-    inline constexpr int version_patch = FILTERS_VERSION_PATCH;
-    inline constexpr int version = FILTERS_VERSION;
-    inline constexpr const char *version_string = FILTERS_VERSION_STRING;
+    inline constexpr int version_major = MATH_LITE_VERSION_MAJOR;
+    inline constexpr int version_minor = MATH_LITE_VERSION_MINOR;
+    inline constexpr int version_patch = MATH_LITE_VERSION_PATCH;
+    inline constexpr int version = MATH_LITE_VERSION;
+    inline constexpr const char *version_string = MATH_LITE_VERSION_STRING;
 }
 
 #endif
