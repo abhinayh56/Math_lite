@@ -1,0 +1,24 @@
+#ifndef FILTERS_VERSION_H
+#define FILTERS_VERSION_H
+
+#define FILTERS_VERSION_MAJOR 1
+#define FILTERS_VERSION_MINOR 0
+#define FILTERS_VERSION_PATCH 0
+
+#define FILTERS_VERSION (FILTERS_VERSION_MAJOR * 10000 + FILTERS_VERSION_MINOR * 100 + FILTERS_VERSION_PATCH)
+
+#define FILTERS_STRINGIFY_HELPER(x) #x
+#define FILTERS_STRINGIFY(x) FILTERS_STRINGIFY_HELPER(x)
+
+#define FILTERS_VERSION_STRING FILTERS_STRINGIFY(FILTERS_VERSION_MAJOR) "." FILTERS_STRINGIFY(FILTERS_VERSION_MINOR) "." FILTERS_STRINGIFY(FILTERS_VERSION_PATCH)
+
+namespace filters
+{
+    inline constexpr int version_major = FILTERS_VERSION_MAJOR;
+    inline constexpr int version_minor = FILTERS_VERSION_MINOR;
+    inline constexpr int version_patch = FILTERS_VERSION_PATCH;
+    inline constexpr int version = FILTERS_VERSION;
+    inline constexpr const char *version_string = FILTERS_VERSION_STRING;
+}
+
+#endif
