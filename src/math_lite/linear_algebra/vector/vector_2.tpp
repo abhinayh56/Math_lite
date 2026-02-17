@@ -1,0 +1,384 @@
+#include "Vector2.h"
+
+template <typename T>
+constexpr Vector2<T>::Vector2() : x(0), y(0)
+{
+}
+
+template <typename T>
+constexpr Vector2<T>::Vector2(T x, T y) : x(x), y(y)
+{
+}
+
+template <typename T>
+constexpr T &Vector2<T>::operator()(int index)
+{
+    if (index == 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
+constexpr const T &Vector2<T>::operator()(int index) const
+{
+    if (index == 1)
+    {
+        return y;
+    }
+    else
+    {
+        return x;
+    }
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::zero()
+{
+    return Vector2<T>(0, 0);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::ones()
+{
+    return Vector2<T>(1, 1);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::add(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return Vector2<T>(v1.x + v2.x, v1.y + v2.y);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::add(const Vector2<T> &v1, T s)
+{
+    return Vector2<T>(v1.x + s, v1.y + s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::add(T s, const Vector2<T> &v1)
+{
+    return Vector2<T>(v1.x + s, v1.y + s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::sub(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return Vector2<T>(v1.x - v2.x, v1.y - v2.y);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::sub(const Vector2<T> &v1, T s)
+{
+    return Vector2<T>(v1.x - s, v1.y - s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::sub(T s, const Vector2<T> &v1)
+{
+    return Vector2<T>(v1.x - s, v1.y - s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::mul(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return Vector2<T>(v1.x * v2.x, v1.y * v2.y);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::mul(const Vector2<T> &v, T s)
+{
+    return Vector2<T>(v.x * s, v.y * s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::mul(T s, const Vector2<T> &v)
+{
+    return Vector2<T>(v.x * s, v.y * s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::div(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return Vector2<T>(v1.x / v2.x, v1.y / v2.y);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::div(const Vector2<T> &v, T s)
+{
+    return Vector2<T>(v.x / s, v.y / s);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::div(T s, const Vector2<T> &v)
+{
+    return Vector2<T>(s / v.x, s / v.y);
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::pow(const Vector2<T> &v, T n)
+{
+    return Vector2<T>(std::pow(v.x, n), std::pow(v.y, n));
+}
+
+template <typename T>
+inline constexpr T Vector2<T>::dot(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return v1.x * v2.x + v1.y * v2.y;
+}
+
+template <typename T>
+inline constexpr T Vector2<T>::cross(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return v1.x * v2.y - v1.y * v2.x;
+}
+
+template <typename T>
+inline constexpr Vector2<T> Vector2<T>::normalize(const Vector2<T> &v)
+{
+    T mag = std::sqrt(v.x * v.x + v.y * v.y);
+    return Vector2<T>(v.x / mag, v.y / mag);
+}
+
+template <typename T>
+inline constexpr T Vector2<T>::magnitude(const Vector2<T> &v)
+{
+    return std::sqrt(v.x * v.x + v.y * v.y);
+}
+
+template <typename T>
+inline constexpr T Vector2<T>::length(const Vector2<T> &v)
+{
+    return std::sqrt(v.x * v.x + v.y * v.y);
+}
+
+template <typename T>
+inline constexpr T Vector2<T>::norm(const Vector2<T> &v)
+{
+    return std::sqrt(v.x * v.x + v.y * v.y);
+}
+
+template <typename T>
+inline constexpr T Vector2<T>::angle(const Vector2<T> &v1, const Vector2<T> &v2)
+{
+    return std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2)));
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator+() const
+{
+    return *this;
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator-() const
+{
+    return Vector2<T>(-x, -y);
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator++()
+{
+    ++x;
+    ++y;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> Vector2<T>::operator++(int)
+{
+    Vector2<T> temp = *this;
+    ++(*this);
+    return temp;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator--()
+{
+    --x;
+    --y;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> Vector2<T>::operator--(int)
+{
+    Vector2<T> temp = *this;
+    --(*this);
+    return temp;
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator+(const Vector2<T> &other) const
+{
+    return Vector2<T>(x + other.x, y + other.y);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator-(const Vector2<T> &other) const
+{
+    return Vector2<T>(x - other.x, y - other.y);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator+(T scalar) const
+{
+    return Vector2<T>(x + scalar, y + scalar);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator-(T scalar) const
+{
+    return Vector2<T>(x - scalar, y - scalar);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator*(T scalar) const
+{
+    return Vector2<T>(x * scalar, y * scalar);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator/(T scalar) const
+{
+    return Vector2<T>(x / scalar, y / scalar);
+}
+
+template <typename T>
+constexpr Vector2<T> Vector2<T>::operator%(T scalar) const
+{
+    return Vector2(x % scalar, y % scalar);
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator+=(const Vector2<T> &other)
+{
+    x += other.x;
+    y += other.y;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator-=(const Vector2<T> &other)
+{
+    x -= other.x;
+    y -= other.y;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator+=(T scalar)
+{
+    x += scalar;
+    y += scalar;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator-=(T scalar)
+{
+    x -= scalar;
+    y -= scalar;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator*=(T scalar)
+{
+    x *= scalar;
+    y *= scalar;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator/=(T scalar)
+{
+    x /= scalar;
+    y /= scalar;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator%=(T scalar)
+{
+    x %= scalar;
+    y %= scalar;
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::operator=(const Vector2<T> &other)
+{
+    if (this != &other)
+    {
+        x = other.x;
+        y = other.y;
+    }
+    return *this;
+}
+
+template <typename T>
+Vector2<T> &Vector2<T>::normalize()
+{
+    T mag = std::sqrt(x * x + y * y);
+    x = x / mag;
+    y = y / mag;
+    return *this;
+}
+
+template <typename T>
+constexpr bool Vector2<T>::operator==(const Vector2<T> &other) const
+{
+    if (std::is_same<T, float>::other.x)
+    {
+        return Math_general<T>::almost_equal(x, other.x, 1e-5) && Math_general<T>::almost_equal(y, other.y, 1e-5);
+    }
+    else if (std::is_same<T, double>::other.x)
+    {
+        return Math_general<T>::almost_equal(x, other.x, 1e-7) && Math_general<T>::almost_equal(y, other.y, 1e-7);
+    }
+    else
+    {
+        return (x == other.x) && (y == other.y);
+    }
+}
+
+template <typename T>
+constexpr bool Vector2<T>::operator!=(const Vector2<T> &other) const
+{
+    if (std::is_same<T, float>::other.x)
+    {
+        return (!Math_general<T>::almost_equal(x, other.x, 1e-5)) || (!Math_general<T>::almost_equal(y, other.y, 1e-5));
+    }
+    else if (std::is_same<T, double>::other.x)
+    {
+        return (!Math_general<T>::almost_equal(x, other.x, 1e-7)) || (!Math_general<T>::almost_equal(y, other.y, 1e-7));
+    }
+    else
+    {
+        return (!(x == other.x)) || (!(y == other.y));
+    }
+}
+
+template <typename T>
+inline constexpr bool Vector2<T>::is_parallel(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), 1, tolerance);
+}
+
+template <typename T>
+inline constexpr bool Vector2<T>::is_anti_parallel(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), -1, tolerance);
+}
+
+template <typename T>
+inline constexpr bool Vector2<T>::is_orthogonal(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance)
+{
+    return Math_general<T>::almost_equal(std::acos(dot(v1, v2) / (magnitude(v1) * magnitude(v2))), 1.5707963267948966192313216916398, tolerance);
+}
