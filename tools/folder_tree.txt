@@ -1,106 +1,106 @@
 math_lite/
-└── Geometry/
-    ├── Conics/
-    │   ├── Circle/
-    │   │   ├── Circle.h
-    │   │   ├── Circle2D.h
-    │   │   ├── Circle2D.tpp
-    │   │   ├── Circle3D.h
-    │   │   └── Circle3D.tpp
-    │   ├── Conics.h
-    │   ├── Ellipse/
-    │   │   ├── Ellipse.h
-    │   │   ├── Ellipse2D.h
-    │   │   ├── Ellipse2D.tpp
-    │   │   ├── Ellipse3D.h
-    │   │   └── Ellipse3D.tpp
-    │   ├── Hyperbola/
-    │   │   ├── Hyperbola.h
-    │   │   ├── Hyperbola2D.h
-    │   │   ├── Hyperbola2D.tpp
-    │   │   ├── Hyperbola3D.h
-    │   │   └── Hyperbola3D.tpp
-    │   └── Parabola/
-    │       ├── Parabola.h
-    │       ├── Parabola2D.h
-    │       ├── Parabola2D.tpp
-    │       ├── Parabola3D.h
-    │       └── Parabola3D.tpp
-    ├── Curves/
-    │   ├── Curves.h
-    │   └── Spline.h
-    ├── Dual_quaternion/
-    │   ├── Dual_quaternion.h
-    │   └── Dual_quaternion.tpp
-    ├── Foundation/
-    │   ├── Foundation.h
-    │   ├── Line/
-    │   │   ├── Line.h
-    │   │   ├── Line2D.h
-    │   │   ├── Line2D.tpp
-    │   │   ├── Line3D.h
-    │   │   ├── Line3D.tpp
-    │   │   ├── LineND.h
-    │   │   └── LineND.tpp
-    │   ├── Point/
-    │   │   ├── Point.h
-    │   │   ├── Point1D.h
-    │   │   ├── Point1D.tpp
-    │   │   ├── Point2D.h
-    │   │   ├── Point2D.tpp
-    │   │   ├── Point3D.h
-    │   │   ├── Point3D.tpp
-    │   │   ├── PointND.h
-    │   │   └── PointND.tpp
-    │   └── Ray/
-    │       ├── Ray.h
-    │       ├── Ray2D.h
-    │       ├── Ray2D.tpp
-    │       ├── Ray3D.h
-    │       ├── Ray3D.tpp
-    │       ├── RayND.h
-    │       └── RayND.tpp
-    ├── Geometry.h
-    ├── Quaternion/
-    │   ├── Quaternion.h
-    │   └── Quaternion.tpp
-    ├── Shapes/
-    │   ├── Hexagon.h
-    │   ├── Octagon.h
-    │   ├── Parallelogram.h
-    │   ├── Pentagon.h
-    │   ├── Polygon.h
-    │   ├── Quadrilateral.h
-    │   ├── Rectangle.h
-    │   ├── Rhombous.h
-    │   ├── Septagon.h
-    │   ├── Shapes.h
-    │   ├── Square.h
-    │   ├── Trapezium.h
-    │   └── Triangle.h
-    └── Surfaces/
-        ├── Cylinder/
-        │   ├── Cylinder.h
-        │   └── Cylinder.tpp
-        ├── Ellipsoid/
-        │   ├── Ellipsoid.h
-        │   └── Ellipsoid.tpp
-        ├── Hyperboloid/
-        │   ├── Hyperboloid.h
-        │   └── Hyperboloid.tpp
-        ├── Paraboloid/
-        │   ├── Paraboloid.h
-        │   └── Paraboloid.tpp
-        ├── Plane/
-        │   ├── Plane.h
-        │   ├── Plane3D.h
-        │   ├── Plane3D.tpp
-        │   ├── PlaneND.h
-        │   └── PlaneND.tpp
-        ├── Sphere/
-        │   ├── Sphere.h
-        │   └── Sphere.tpp
-        ├── Surfaces.h
-        └── Trapezoid/
-            ├── Trapezoid.h
-            └── Trapezoid.tpp
+└── geometry/
+    ├── conics/
+    │   ├── circle/
+    │   │   ├── circle.h
+    │   │   ├── circle2d.h
+    │   │   ├── circle2d.tpp
+    │   │   ├── circle3d.h
+    │   │   └── circle3d.tpp
+    │   ├── conics.h
+    │   ├── ellipse/
+    │   │   ├── ellipse.h
+    │   │   ├── ellipse2d.h
+    │   │   ├── ellipse2d.tpp
+    │   │   ├── ellipse3d.h
+    │   │   └── ellipse3d.tpp
+    │   ├── hyperbola/
+    │   │   ├── hyperbola.h
+    │   │   ├── hyperbola2d.h
+    │   │   ├── hyperbola2d.tpp
+    │   │   ├── hyperbola3d.h
+    │   │   └── hyperbola3d.tpp
+    │   └── parabola/
+    │       ├── parabola.h
+    │       ├── parabola2d.h
+    │       ├── parabola2d.tpp
+    │       ├── parabola3d.h
+    │       └── parabola3d.tpp
+    ├── curves/
+    │   ├── curves.h
+    │   └── spline.h
+    ├── dual_quaternion/
+    │   ├── dual_quaternion.h
+    │   └── dual_quaternion.tpp
+    ├── foundation/
+    │   ├── foundation.h
+    │   ├── line/
+    │   │   ├── line.h
+    │   │   ├── line2d.h
+    │   │   ├── line2d.tpp
+    │   │   ├── line3d.h
+    │   │   ├── line3d.tpp
+    │   │   ├── linend.h
+    │   │   └── linend.tpp
+    │   ├── point/
+    │   │   ├── point.h
+    │   │   ├── point1d.h
+    │   │   ├── point1d.tpp
+    │   │   ├── point2d.h
+    │   │   ├── point2d.tpp
+    │   │   ├── point3d.h
+    │   │   ├── point3d.tpp
+    │   │   ├── pointnd.h
+    │   │   └── pointnd.tpp
+    │   └── ray/
+    │       ├── ray.h
+    │       ├── ray2d.h
+    │       ├── ray2d.tpp
+    │       ├── ray3d.h
+    │       ├── ray3d.tpp
+    │       ├── raynd.h
+    │       └── raynd.tpp
+    ├── geometry.h
+    ├── quaternion/
+    │   ├── quaternion.h
+    │   └── quaternion.tpp
+    ├── shapes/
+    │   ├── hexagon.h
+    │   ├── octagon.h
+    │   ├── parallelogram.h
+    │   ├── pentagon.h
+    │   ├── polygon.h
+    │   ├── quadrilateral.h
+    │   ├── rectangle.h
+    │   ├── rhombous.h
+    │   ├── septagon.h
+    │   ├── shapes.h
+    │   ├── square.h
+    │   ├── trapezium.h
+    │   └── triangle.h
+    └── surfaces/
+        ├── cylinder/
+        │   ├── cylinder.h
+        │   └── cylinder.tpp
+        ├── ellipsoid/
+        │   ├── ellipsoid.h
+        │   └── ellipsoid.tpp
+        ├── hyperboloid/
+        │   ├── hyperboloid.h
+        │   └── hyperboloid.tpp
+        ├── paraboloid/
+        │   ├── paraboloid.h
+        │   └── paraboloid.tpp
+        ├── plane/
+        │   ├── plane.h
+        │   ├── plane3d.h
+        │   ├── plane3d.tpp
+        │   ├── planend.h
+        │   └── planend.tpp
+        ├── sphere/
+        │   ├── sphere.h
+        │   └── sphere.tpp
+        ├── surfaces.h
+        └── trapezoid/
+            ├── trapezoid.h
+            └── trapezoid.tpp
