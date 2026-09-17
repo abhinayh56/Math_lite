@@ -106,13 +106,13 @@ inline constexpr T Math_general<T>::wrap(T x, T a, T b)
 template <typename T>
 inline constexpr T Math_general<T>::wrap_pi(T x)
 {
-	if (x <= -MATH_PI)
+	if (x <= -T(MATH_PI))
 	{
-		return x + MATH_2_PI;
+		return x + T(MATH_2_PI);
 	}
-	else if (x > MATH_PI)
+	else if (x > T(MATH_PI))
 	{
-		return x - MATH_2_PI;
+		return x - T(MATH_2_PI);
 	}
 	else
 	{
@@ -125,11 +125,11 @@ inline constexpr T Math_general<T>::wrap_2pi(T x)
 {
 	if (x < T(0))
 	{
-		return x + MATH_2_PI;
+		return x + T(MATH_2_PI);
 	}
-	else if (x >= MATH_2_PI)
+	else if (x >= T(MATH_2_PI))
 	{
-		return x - MATH_2_PI;
+		return x - T(MATH_2_PI);
 	}
 	else
 	{
@@ -140,13 +140,13 @@ inline constexpr T Math_general<T>::wrap_2pi(T x)
 template <typename T>
 inline constexpr T Math_general<T>::wrap_180(T x)
 {
-	if (x <= (-180.0))
+	if (x <= T(-180.0))
 	{
-		return x + 360.0;
+		return x + T(360.0);
 	}
-	else if (x > 180.0)
+	else if (x > T(180.0))
 	{
-		return x - 360.0;
+		return x - T(360.0);
 	}
 	else
 	{
@@ -159,11 +159,11 @@ inline constexpr T Math_general<T>::wrap_360(T x)
 {
 	if (x < 0)
 	{
-		return x + 360;
+		return x + T(360);
 	}
-	else if (x >= 360)
+	else if (x >= T(360))
 	{
-		return x - 360;
+		return x - T(360);
 	}
 	else
 	{
@@ -174,7 +174,7 @@ inline constexpr T Math_general<T>::wrap_360(T x)
 template <typename T>
 inline constexpr T Math_general<T>::apply_deadband(T x, T deadband)
 {
-	if (mod(x) < deadband * 0.5)
+	if (mod(x) < deadband * T(0.5))
 	{
 		return 0;
 	}
@@ -187,19 +187,19 @@ inline constexpr T Math_general<T>::apply_deadband(T x, T deadband)
 template <typename T>
 inline constexpr T Math_general<T>::apply_deadband2(T x, T deadband)
 {
-	if (mod(x) <= deadband * 0.5)
+	if (mod(x) <= deadband * T(0.5))
 	{
 		return 0;
 	}
 	else
 	{
-		if (x > deadband * 0.5)
+		if (x > deadband * T(0.5))
 		{
-			return x - deadband * 0.5;
+			return x - deadband * T(0.5);
 		}
 		else
 		{
-			return x + deadband * 0.5;
+			return x + deadband * T(0.5);
 		}
 	}
 }
@@ -249,49 +249,49 @@ inline constexpr T Math_general<T>::degps_2_rpm(T x)
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_s(T freq)
 {
-	return 1.0 / freq;
+	return T(1.0) / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_ms(T freq)
 {
-	return 1000.0 / freq;
+	return T(1000.0) / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_us(T freq)
 {
-	return 1000000.0 / freq;
+	return T(1000000.0) / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::hz_to_ns(T freq)
 {
-	return 1000000000.0 / freq;
+	return T(1000000000.0) / freq;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::s_to_hz(T dt)
 {
-	return 1.0 / dt;
+	return T(1.0) / dt;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::ms_to_hz(T dt)
 {
-	return 1000.0 / dt;
+	return T(1000.0) / dt;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::us_to_hz(T dt)
 {
-	return 1000000.0 / dt;
+	return T(1000000.0) / dt;
 }
 
 template <typename T>
 inline constexpr T Math_general<T>::ns_to_hz(T dt)
 {
-	return 1000000000.0 / dt;
+	return T(1000000000.0) / dt;
 }
 
 template <typename T>
