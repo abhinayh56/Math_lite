@@ -1,9 +1,9 @@
 #ifndef ROTATION3D_H
 #define ROTATION3D_H
 
-#include "../../Quaternion/Quaternion.h"
-#include "../../Matrix/Matrix3.h"
-#include "../../Vector/Vector3.h"
+#include "../../../geometry/quaternion/quaternion.h"
+#include "../../matrix/matrix_3.h"
+#include "../../vector/vector_3.h"
 #include <cmath>
 
 template <typename T>
@@ -41,6 +41,6 @@ class Rotation3D
         Quaternion<T> q;  // Internal quaternion representation
 };
 
-#include "Rotation3D.tpp"
+#include "../../../../../src/math_lite/linear_algebra/transform/transform_3d/rotation_3d.tpp"
 
 #endif

@@ -95,6 +95,6 @@ class Rotation2D
         Complex<T> c;  // Internal complex number representation (always normalized)
 };
 
-#include "Rotation2D.tpp"
+#include "../../../../../src/math_lite/linear_algebra/transform/transform_2d/rotation_2d.tpp"
 
 #endif

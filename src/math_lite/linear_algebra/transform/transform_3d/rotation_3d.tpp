@@ -1,4 +1,4 @@
-#include "Rotation3D.h"
+#include "../../../../../include/math_lite/linear_algebra/transform/transform_3d/rotation_3d.h"
 
 template <typename T>
 constexpr Rotation3D<T>::Rotation3D() : q(Quaternion<T>::identity())
