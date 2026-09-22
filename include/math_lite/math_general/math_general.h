@@ -49,6 +49,6 @@ public:
 	static inline constexpr T fast_inv_sqrt(T number);
 };
 
-#include "math_general.tpp"
+#include "../../../src/math_lite/math_general/math_general.tpp"
 
 #endif
