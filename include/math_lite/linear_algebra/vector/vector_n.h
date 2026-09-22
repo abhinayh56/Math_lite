@@ -5,7 +5,6 @@
 #include <cstddef>
 #include <type_traits>
 #include "../../math_general/math_general.h"
-#include <iostream>
 template <typename T, std::size_t N>
 class VectorN
 {
