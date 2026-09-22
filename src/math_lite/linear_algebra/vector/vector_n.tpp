@@ -1,4 +1,4 @@
-#include "VectorN.h"
+#include "../../../../include/math_lite/linear_algebra/vector/vector_n.h"
 
 template <typename T, std::size_t N>
 constexpr VectorN<T, N>::VectorN()

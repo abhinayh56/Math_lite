@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <cstring>
-#include "MatrixN.h"
+#include "../../../../include/math_lite/linear_algebra/matrix/matrix_n.h"
 
 template <typename T, size_t N>
 constexpr MatrixN<T,N>::MatrixN()

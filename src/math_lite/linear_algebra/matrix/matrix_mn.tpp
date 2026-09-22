@@ -1,4 +1,4 @@
-#include "MatrixMN.h"
+#include "../../../../include/math_lite/linear_algebra/matrix/matrix_mn.h"
 
 template <typename T, size_t M, size_t N>
 constexpr MatrixMN<T, M, N>::MatrixMN()

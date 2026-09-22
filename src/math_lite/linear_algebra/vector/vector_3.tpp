@@ -1,4 +1,4 @@
-#include "Vector3.h"
+#include "../../../../include/math_lite/linear_algebra/vector/vector_3.h"
 
 template <typename T>
 constexpr Vector3<T>::Vector3() : x(0), y(0), z(0)

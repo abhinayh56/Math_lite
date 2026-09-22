@@ -79,7 +79,7 @@ public:
     static inline constexpr bool is_orthogonal(const Vector2<T> &v1, const Vector2<T> &v2, T tolerance);
 };
 
-#include "vector_2.tpp"
+#include "../../../../src/math_lite/linear_algebra/vector/vector_2.tpp"
 
 template <typename T>
 constexpr Vector2<T> operator+(T scalar, const Vector2<T> &v)

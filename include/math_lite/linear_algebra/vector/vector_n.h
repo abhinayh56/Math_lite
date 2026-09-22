@@ -84,7 +84,7 @@ public:
     static inline constexpr bool is_orthogonal(const VectorN<T, N> &v1, const VectorN<T, N> &v2, T tolerance);
 };
 
-#include "VectorN.tpp"
+#include "../../../../src/math_lite/linear_algebra/vector/vector_n.tpp"
 
 template <typename T, std::size_t N>
 constexpr VectorN<T, N> operator+(T scalar, const VectorN<T, N> &v)

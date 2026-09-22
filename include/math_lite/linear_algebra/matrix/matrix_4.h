@@ -68,6 +68,6 @@ public:
     bool isSymmetric() const;
 };
 
-#include "matrix_4.tpp"
+#include "../../../../src/math_lite/linear_algebra/matrix/matrix_4.tpp"
 
 #endif

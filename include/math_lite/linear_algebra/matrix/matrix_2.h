@@ -71,6 +71,6 @@ public:
     constexpr T operator()(int row, int col) const;
 };
 
-#include "matrix_2.tpp"
+#include "../../../../src/math_lite/linear_algebra/matrix/matrix_2.tpp"
 
 #endif

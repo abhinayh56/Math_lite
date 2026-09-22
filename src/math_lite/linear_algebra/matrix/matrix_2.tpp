@@ -1,4 +1,4 @@
-#include "Matrix2.h"
+#include "../../../../include/math_lite/linear_algebra/matrix/matrix_2.h"
 
 template <typename T>
 constexpr Matrix2<T>::Matrix2() : m{{0, 0}, {0, 0}}

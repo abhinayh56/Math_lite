@@ -1,4 +1,4 @@
-#include "Vector2.h"
+#include "../../../../include/math_lite/linear_algebra/vector/vector_2.h"
 
 template <typename T>
 constexpr Vector2<T>::Vector2() : x(0), y(0)

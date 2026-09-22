@@ -66,6 +66,6 @@ public:
     static constexpr size_t size() { return N; }
 };
 
-#include "matrix_n.tpp"
+#include "../../../../src/math_lite/linear_algebra/matrix/matrix_n.tpp"
 
 #endif
