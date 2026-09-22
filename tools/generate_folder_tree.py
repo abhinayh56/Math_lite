@@ -50,7 +50,7 @@ def write_filtered_tree(root_path, output_file):
 
 
 if __name__ == "__main__":
-    folder_path = r"D:\repo\Math_lite"
-    output_file = r"D:\repo\Math_lite\tools\folder_tree.txt"
+    folder_path = r"D:\temp\Math_lite"
+    output_file = r"D:\temp\Math_lite\tools\folder_tree.txt"
     write_filtered_tree(folder_path, output_file)
     print(f"Saved hierarchy to {output_file}")
