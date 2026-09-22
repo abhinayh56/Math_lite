@@ -106,13 +106,13 @@ inline constexpr T Math_general<T>::wrap(T x, T a, T b)
 template <typename T>
 inline constexpr T Math_general<T>::wrap_pi(T x)
 {
-	if (x <= -T(MATH_PI))
+	if (x <= -T(3.14159265358979323846264338327950288))
 	{
-		return x + T(MATH_2_PI);
+		return x + T(6.28318530717958647692528676655900576);
 	}
-	else if (x > T(MATH_PI))
+	else if (x > T(3.14159265358979323846264338327950288))
 	{
-		return x - T(MATH_2_PI);
+		return x - T(6.28318530717958647692528676655900576);
 	}
 	else
 	{
@@ -125,11 +125,11 @@ inline constexpr T Math_general<T>::wrap_2pi(T x)
 {
 	if (x < T(0))
 	{
-		return x + T(MATH_2_PI);
+		return x + T(6.28318530717958647692528676655900576);
 	}
-	else if (x >= T(MATH_2_PI))
+	else if (x >= T(6.28318530717958647692528676655900576))
 	{
-		return x - T(MATH_2_PI);
+		return x - T(6.28318530717958647692528676655900576);
 	}
 	else
 	{
