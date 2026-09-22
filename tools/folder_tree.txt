@@ -1,6 +1,14 @@
 Math_lite/
 ├── include/
 │   └── math_lite/
+│       ├── algebra/
+│       │   ├── algebra.h
+│       │   ├── complex/
+│       │   │   └── complex.h
+│       │   ├── dual_quaternion/
+│       │   │   └── dual_quaternion.h
+│       │   └── quaternion/
+│       │       └── quaternion.h
 │       ├── calculus/
 │       │   ├── calculus.h
 │       │   └── fourier_transform.h
@@ -26,8 +34,6 @@ Math_lite/
 │       │   ├── curves/
 │       │   │   ├── curves.h
 │       │   │   └── spline.h
-│       │   ├── dual_quaternion/
-│       │   │   └── dual_quaternion.h
 │       │   ├── foundation/
 │       │   │   ├── foundation.h
 │       │   │   ├── line/
@@ -47,8 +53,6 @@ Math_lite/
 │       │   │       ├── ray_3d.h
 │       │   │       └── ray_nd.h
 │       │   ├── geometry.h
-│       │   ├── quaternion/
-│       │   │   └── quaternion.h
 │       │   ├── shapes/
 │       │   │   ├── hexagon.h
 │       │   │   ├── octagon.h
@@ -82,8 +86,6 @@ Math_lite/
 │       │       └── trapezoid/
 │       │           └── trapezoid.h
 │       ├── linear_algebra/
-│       │   ├── complex/
-│       │   │   └── complex.h
 │       │   ├── linear_algebra.h
 │       │   ├── matrix/
 │       │   │   ├── matrix.h
@@ -92,10 +94,6 @@ Math_lite/
 │       │   │   ├── matrix_4.h
 │       │   │   ├── matrix_mn.h
 │       │   │   └── matrix_n.h
-│       │   ├── numericals/
-│       │   │   ├── interpolation.h
-│       │   │   ├── numericals.h
-│       │   │   └── polynomial.h
 │       │   ├── solvers/
 │       │   │   ├── cholesky_d.h
 │       │   │   ├── conjugate_gradient_solver.h
@@ -136,6 +134,13 @@ Math_lite/
 │           └── statistics.h
 ├── src/
 │   └── math_lite/
+│       ├── algebra/
+│       │   ├── complex/
+│       │   │   └── complex.tpp
+│       │   ├── dual_quaternion/
+│       │   │   └── dual_quaternion.tpp
+│       │   └── quaternion/
+│       │       └── quaternion.tpp
 │       ├── calculus/
 │       │   └── fourier_transform.tpp
 │       ├── geometry/
@@ -154,8 +159,6 @@ Math_lite/
 │       │   │       └── parabola_3d.tpp
 │       │   ├── curves/
 │       │   │   └── spline.tpp
-│       │   ├── dual_quaternion/
-│       │   │   └── dual_quaternion.tpp
 │       │   ├── foundation/
 │       │   │   ├── line/
 │       │   │   │   ├── line_2d.tpp
@@ -170,8 +173,6 @@ Math_lite/
 │       │   │       ├── ray_2d.tpp
 │       │   │       ├── ray_3d.tpp
 │       │   │       └── ray_nd.tpp
-│       │   ├── quaternion/
-│       │   │   └── quaternion.tpp
 │       │   ├── shapes/
 │       │   │   ├── hexagon.tpp
 │       │   │   ├── octagon.tpp
@@ -203,17 +204,12 @@ Math_lite/
 │       │       └── trapezoid/
 │       │           └── trapezoid.tpp
 │       ├── linear_algebra/
-│       │   ├── complex/
-│       │   │   └── complex.tpp
 │       │   ├── matrix/
 │       │   │   ├── matrix_2.tpp
 │       │   │   ├── matrix_3.tpp
 │       │   │   ├── matrix_4.tpp
 │       │   │   ├── matrix_mn.tpp
 │       │   │   └── matrix_n.tpp
-│       │   ├── numericals/
-│       │   │   ├── interpolation.tpp
-│       │   │   └── polynomial.tpp
 │       │   ├── solvers/
 │       │   │   ├── cholesky_d.tpp
 │       │   │   ├── conjugate_gradient_solver.tpp
