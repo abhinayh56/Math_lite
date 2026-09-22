@@ -242,7 +242,7 @@ inline constexpr MatrixMN<T, M, N> MatrixMN<T, M, N>::inv(const MatrixMN<T, M, N
     static_assert(M == N, "Inverse is only defined for square matrices");
     T determinant = det(M1);
     if (determinant == T(0))
-        throw std::runtime_error("Matrix is singular");
+        throw std::runtime_error("Matrix is singular"); // to remove
     return div(adj(M1), determinant);
 }
 

@@ -3,7 +3,7 @@
 
 #include <cmath>
 #include <array>
-#include <stdexcept>
+#include <stdexcept> // to remove
 
 template <typename T, size_t M, size_t N>
 class MatrixMN
