@@ -76,6 +76,6 @@ public:
     constexpr bool operator!=(const DualQuaternion<T> &other) const;
 };
 
-#include "../../../../src/math_lite/geometry/dual_quaternion/dual_quaternion.tpp"
+#include "../../../../src/math_lite/algebra/dual_quaternion/dual_quaternion.tpp"
 
 #endif

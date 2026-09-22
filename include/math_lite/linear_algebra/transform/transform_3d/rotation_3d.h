@@ -1,7 +1,7 @@
 #ifndef ROTATION3D_H
 #define ROTATION3D_H
 
-#include "../../../geometry/quaternion/quaternion.h"
+#include "../../../algebra/quaternion/quaternion.h"
 #include "../../matrix/matrix_3.h"
 #include "../../vector/vector_3.h"
 #include <cmath>

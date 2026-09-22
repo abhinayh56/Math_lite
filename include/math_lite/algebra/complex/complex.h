@@ -33,18 +33,18 @@ public:
     static inline constexpr T abs(const Complex<T> &z);
     static inline constexpr T arg(const Complex<T> &z);
     static inline constexpr Complex<T> inv(const Complex<T> &z);
-    // static inline constexpr Complex<T> sqrt(const Complex<T> &z);
-    // static inline constexpr Complex<T> exp(const Complex<T> &z);
-    // static inline constexpr Complex<T> log(const Complex<T> &z);
-    // static inline constexpr Complex<T> pow(const Complex<T> &z, T n);
-    // static inline constexpr Complex<T> pow(const Complex<T> &z1, const Complex<T> &z2);
+    static inline constexpr Complex<T> sqrt(const Complex<T> &z);
+    static inline constexpr Complex<T> exp(const Complex<T> &z);
+    static inline constexpr Complex<T> log(const Complex<T> &z);
+    static inline constexpr Complex<T> pow(const Complex<T> &z, T n);
+    static inline constexpr Complex<T> pow(const Complex<T> &z1, const Complex<T> &z2);
 
-    // static inline constexpr Complex<T> sin(const Complex<T> &z);
-    // static inline constexpr Complex<T> cos(const Complex<T> &z);
-    // static inline constexpr Complex<T> tan(const Complex<T> &z);
+    static inline constexpr Complex<T> sin(const Complex<T> &z);
+    static inline constexpr Complex<T> cos(const Complex<T> &z);
+    static inline constexpr Complex<T> tan(const Complex<T> &z);
 
-    // static inline constexpr Complex<T> fromPolar(T r, T theta);
-    // inline constexpr void toPolar(T &r, T &theta) const;
+    static inline constexpr Complex<T> fromPolar(T r, T theta);
+    inline constexpr void toPolar(T &r, T &theta) const;
 
     constexpr Complex<T> operator+() const;
     constexpr Complex<T> operator-() const;
@@ -72,7 +72,7 @@ public:
     constexpr bool operator!=(const Complex<T> &other) const;
 };
 
-#include "complex.tpp"
+#include "../../../../src/math_lite/algebra/complex/complex.tpp"
 
 template <typename T>
 constexpr Complex<T> operator+(T scalar, const Complex<T> &other)

@@ -63,7 +63,7 @@ public:
     constexpr bool operator!=(const Quaternion<T> &other) const;
 };
 
-#include "../../../../src/math_lite/geometry/quaternion/quaternion.tpp"
+#include "../../../../src/math_lite/algebra/quaternion/quaternion.tpp"
 
 template <typename T>
 constexpr Quaternion<T> operator*(T scalar, const Quaternion<T> &q)
