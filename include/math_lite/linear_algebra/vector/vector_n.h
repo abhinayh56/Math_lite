@@ -18,7 +18,6 @@ public:
     template <typename... Args>
     constexpr VectorN(Args... elements_) : elements{static_cast<T>(elements_)...}
     {
-        std::cout << "11111\n";
         static_assert(sizeof...(Args) == N, "Number of arguments must be equal to N");
     }
 
