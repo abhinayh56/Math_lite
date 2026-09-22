@@ -21,7 +21,7 @@ constexpr T &Vector4<T>::operator()(int index)
     {
         return z;
     }
-    else if (index = 1)
+    else if (index == 1)
     {
         return y;
     }
@@ -42,7 +42,7 @@ constexpr const T &Vector4<T>::operator()(int index) const
     {
         return z;
     }
-    else if (index = 1)
+    else if (index == 1)
     {
         return y;
     }
