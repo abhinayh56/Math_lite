@@ -1,2 +1,2 @@
-#include "Plane3D.h"
-#include "PlaneND.h"
+#include "plane_3d.h"
+#include "plane_nd.h"

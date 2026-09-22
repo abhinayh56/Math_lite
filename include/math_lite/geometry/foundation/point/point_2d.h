@@ -13,6 +13,6 @@ public:
     static inline constexpr T distance(const Point2D<T> &p1, const Point2D<T> &p2);
 };
 
-#include "point_2d.tpp"
+#include "../../../../../src/math_lite/geometry/foundation/point/point_2d.tpp"
 
 #endif

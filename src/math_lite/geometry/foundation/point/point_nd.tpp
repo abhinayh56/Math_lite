@@ -1,4 +1,4 @@
-#include "PointND.h"
+#include "../../../../../include/math_lite/geometry/foundation/point/point_nd.h"
 
 template <typename T, std::size_t N>
 constexpr PointND<T, N>::PointND()

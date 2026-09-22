@@ -1,7 +1,7 @@
 #ifndef DUAL_QUATERNION_H
 #define DUAL_QUATERNION_H
 
-#include "../Quaternion/Quaternion.h"
+#include "../quaternion/quaternion.h"
 #include <cmath>
 
 template <typename T>
@@ -76,6 +76,6 @@ public:
     constexpr bool operator!=(const DualQuaternion<T> &other) const;
 };
 
-#include "Dual_quaternion.tpp"
+#include "../../../../src/math_lite/geometry/dual_quaternion/dual_quaternion.tpp"
 
 #endif

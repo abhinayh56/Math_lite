@@ -13,6 +13,6 @@ public:
     constexpr Point3D(T x, T y, T z);
 };
 
-#include "point_3d.tpp"
+#include "../../../../../src/math_lite/geometry/foundation/point/point_3d.tpp"
 
 #endif

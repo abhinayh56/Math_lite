@@ -1,4 +1,4 @@
-#include "Point3D.h"
+#include "../../../../../include/math_lite/geometry/foundation/point/point_3d.h"
 
 template <typename T>
 constexpr Point3D<T>::Point3D() : x(0), y(0), z(0)

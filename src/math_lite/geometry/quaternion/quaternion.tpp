@@ -1,4 +1,4 @@
-#include "Quaternion.h"
+#include "../../../../include/math_lite/geometry/quaternion/quaternion.h"
 
 template <typename T>
 constexpr Quaternion<T>::Quaternion() : q0(0), q1(0), q2(0), q3(0)

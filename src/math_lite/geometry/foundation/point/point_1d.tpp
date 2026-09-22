@@ -1,4 +1,4 @@
-#include "Point1D.h"
+#include "../../../../../include/math_lite/geometry/foundation/point/point_1d.h"
 
 template <typename T>
 constexpr Point1D<T>::Point1D() : x(0)

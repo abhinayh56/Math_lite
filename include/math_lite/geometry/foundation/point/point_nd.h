@@ -14,6 +14,6 @@ public:
     constexpr PointND(const T *coordinates_);
 };
 
-#include "point_nd.tpp"
+#include "../../../../../src/math_lite/geometry/foundation/point/point_nd.tpp"
 
 #endif

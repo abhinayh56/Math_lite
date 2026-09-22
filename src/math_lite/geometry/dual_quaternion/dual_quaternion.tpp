@@ -1,4 +1,4 @@
-#include "Dual_quaternion.h"
+#include "../../../../include/math_lite/geometry/dual_quaternion/dual_quaternion.h"
 
 template <typename T>
 constexpr DualQuaternion<T>::DualQuaternion() : real(), dual()

@@ -22,6 +22,6 @@ public:
     bool is_intersecting(const Line2D<T>& l2) const;
 };
 
-#include "line_2d.tpp"
+#include "../../../../../src/math_lite/geometry/foundation/line/line_2d.tpp"
 
 #endif

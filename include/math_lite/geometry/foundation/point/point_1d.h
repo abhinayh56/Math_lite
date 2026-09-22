@@ -15,6 +15,6 @@ public:
     static inline constexpr bool is_coincident(const Point1D<T> &p1, const Point1D<T> &p2);
 };
 
-#include "point_1d.tpp"
+#include "../../../../../src/math_lite/geometry/foundation/point/point_1d.tpp"
 
 #endif

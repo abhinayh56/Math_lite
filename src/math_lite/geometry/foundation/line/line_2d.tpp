@@ -1,4 +1,4 @@
-#include "Line2D.h"
+#include "../../../../../include/math_lite/geometry/foundation/line/line_2d.h"
 
 template <typename T>
 constexpr Line2D<T>::Line2D() : p(0,0), v(1,0)
