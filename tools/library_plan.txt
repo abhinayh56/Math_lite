@@ -1,0 +1,162 @@
+math_lite/
+├── math_lite.h
+├── math_general/
+│   └── math_general.h
+├── algebra/
+│   ├── algebra.h
+│   ├── complex/
+│   │   └── complex.h
+│   ├── dual/
+│   │   └── dual.h
+│   ├── quaternion/
+│   │   └── quaternion.h
+│   ├── dual_quaternion/
+│   │   └── dual_quaternion.h
+│   └── polynomial/
+│       └── polynomial.h
+├── linear_algebra/
+│   ├── linear_algebra.h
+│   ├── vector/
+│   │   ├── vector.h
+│   │   ├── vector_2.h
+│   │   ├── vector_3.h
+│   │   ├── vector_4.h
+│   │   └── vector_n.h
+│   ├── matrix/
+│   │   ├── matrix.h
+│   │   ├── matrix_2.h
+│   │   ├── matrix_3.h
+│   │   ├── matrix_4.h
+│   │   ├── matrix_n.h
+│   │   └── matrix_mn.h
+│   ├── solvers/
+│   │   ├── solvers.h
+│   │   ├── gaussian_elimination.h
+│   │   ├── least_square_solver.h
+│   │   ├── linear_solver.h
+│   │   └── conjugate_gradient_solver.h
+│   └── decomposition/
+│       ├── decomposition.h
+│       ├── cholesky_d.h
+│       ├── eigen_d.h
+│       ├── lud.h
+│       ├── qrd.h
+│       └── svd.h
+├── lie_algebra/
+│   ├── lie_algebra.h
+│   ├── se2/
+│   │   └── se2.h
+│   ├── se3/
+│   │   └── se3.h
+│   ├── so2/
+│   │   └── so2.h
+│   └── so3/
+│       └── so3.h
+├── geometry/
+│   ├── geometry.h
+│   ├── foundation/
+│   │   ├── foundation.h
+│   │   ├── point/
+│   │   │   ├── point.h
+│   │   │   ├── point_1d.h
+│   │   │   ├── point_2d.h
+│   │   │   ├── point_3d.h
+│   │   │   └── point_nd.h
+│   │   ├── line/
+│   │   │   ├── line.h
+│   │   │   ├── line_2d.h
+│   │   │   ├── line_3d.h
+│   │   │   └── line_nd.h
+│   │   └── ray/
+│   │       ├── ray.h
+│   │       ├── ray_2d.h
+│   │       ├── ray_3d.h
+│   │       └── ray_nd.h
+│   ├── curves/
+│   │   ├── curves.h
+│   │   └── spline.h
+│   ├── conics/
+│   │   ├── conics.h
+│   │   ├── circle/
+│   │   │   ├── circle.h
+│   │   │   ├── circle_2d.h
+│   │   │   └── circle_3d.h
+│   │   ├── ellipse/
+│   │   │   ├── ellipse.h
+│   │   │   ├── ellipse_2d.h
+│   │   │   └── ellipse_3d.h
+│   │   ├── parabola/
+│   │   │   ├── parabola.h
+│   │   │   ├── parabola_2d.h
+│   │   │   └── parabola_3d.h
+│   │   └── hyperbola/
+│   │       ├── hyperbola.h
+│   │       ├── hyperbola_2d.h
+│   │       └── hyperbola_3d.h
+│   ├── shapes/
+│   │   ├── shapes.h
+│   │   ├── triangle.h
+│   │   ├── quadrilateral.h
+│   │   ├── pentagon.h
+│   │   ├── hexagon.h
+│   │   ├── septagon.h
+│   │   ├── octagon.h
+│   │   └── polygon.h
+│   └── surfaces/
+│       ├── surfaces.h
+│       ├── plane/
+│       │   ├── plane.h
+│       │   ├── plane_3d.h
+│       │   └── plane_nd.h
+│       ├── cylinder/
+│       │   └── cylinder.h
+│       ├── sphere/
+│       │   └── sphere.h
+│       ├── ellipsoid/
+│       │   └── ellipsoid.h
+│       ├── paraboloid/
+│       │   └── paraboloid.h
+│       ├── hyperboloid/
+│       │   └── hyperboloid.h
+│       └── trapezoid/
+│           └── trapezoid.h
+├── transformations/
+│       ├── transformations.h
+│       ├── 2d/
+│       │   ├── transformations_2d.h
+│       │   ├── translation_2d.h
+│       │   ├── rotation_2d.h
+│       │   ├── homogeneous_2d.h
+│       │   └── affine_2d.h
+│       └── 3d/
+│           ├── transformations_3d.h
+│           ├── translation_3d.h
+│           ├── rotation_3d.h
+│           ├── homogeneous_3d.h
+│           └── affine_3d.h
+├── calculus/
+│   ├── calculus.h
+│   ├── differentiation/
+│   │   └── differentiation.h
+│   ├── integration/
+│   │   └── integration.h
+│   └── series/
+│       └── series.h
+├── numerical/
+│   ├── numerical.h
+│   ├── differentiation/
+│   │   └── differentiation.h
+│   ├── integration/
+│   │   └── integration.h
+│   ├── interpolation/
+│   │   └── interpolation.h
+│   ├── approximation/
+│   │   └── approximation.h
+│   └── root_finding/
+│       └── root_finding.h
+├── probability/
+│   └── probability.h
+├── statistics/
+│   └── statistics.h
+└── optimization/
+    └── optimization.h
