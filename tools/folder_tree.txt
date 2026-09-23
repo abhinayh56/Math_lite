@@ -9,9 +9,6 @@ Math_lite/
 │       │   │   └── dual_quaternion.h
 │       │   └── quaternion/
 │       │       └── quaternion.h
-│       ├── calculus/
-│       │   ├── calculus.h
-│       │   └── fourier_transform.h
 │       ├── geometry/
 │       │   ├── conics/
 │       │   │   ├── circle/
@@ -127,123 +124,110 @@ Math_lite/
 │       │       └── vector_n.h
 │       ├── math_general/
 │       │   └── math_general.h
-│       ├── math_lite.h
-│       ├── probability/
-│       │   └── probability.h
-│       └── statistics/
-│           └── statistics.h
-├── src/
-│   └── math_lite/
-│       ├── algebra/
-│       │   ├── complex/
-│       │   │   └── complex.tpp
-│       │   ├── dual_quaternion/
-│       │   │   └── dual_quaternion.tpp
-│       │   └── quaternion/
-│       │       └── quaternion.tpp
-│       ├── calculus/
-│       │   └── fourier_transform.tpp
-│       ├── geometry/
-│       │   ├── conics/
-│       │   │   ├── circle/
-│       │   │   │   ├── circle_2d.tpp
-│       │   │   │   └── circle_3d.tpp
-│       │   │   ├── ellipse/
-│       │   │   │   ├── ellipse_2d.tpp
-│       │   │   │   └── ellipse_3d.tpp
-│       │   │   ├── hyperbola/
-│       │   │   │   ├── hyperbola_2d.tpp
-│       │   │   │   └── hyperbola_3d.tpp
-│       │   │   └── parabola/
-│       │   │       ├── parabola_2d.tpp
-│       │   │       └── parabola_3d.tpp
-│       │   ├── curves/
-│       │   │   └── spline.tpp
-│       │   ├── foundation/
-│       │   │   ├── line/
-│       │   │   │   ├── line_2d.tpp
-│       │   │   │   ├── line_3d.tpp
-│       │   │   │   └── line_nd.tpp
-│       │   │   ├── point/
-│       │   │   │   ├── point_1d.tpp
-│       │   │   │   ├── point_2d.tpp
-│       │   │   │   ├── point_3d.tpp
-│       │   │   │   └── point_nd.tpp
-│       │   │   └── ray/
-│       │   │       ├── ray_2d.tpp
-│       │   │       ├── ray_3d.tpp
-│       │   │       └── ray_nd.tpp
-│       │   ├── shapes/
-│       │   │   ├── hexagon.tpp
-│       │   │   ├── octagon.tpp
-│       │   │   ├── parallelogram.tpp
-│       │   │   ├── pentagon.tpp
-│       │   │   ├── polygon.tpp
-│       │   │   ├── quadrilateral.tpp
-│       │   │   ├── rectangle.tpp
-│       │   │   ├── rhombous.tpp
-│       │   │   ├── septagon.tpp
-│       │   │   ├── shapes.tpp
-│       │   │   ├── square.tpp
-│       │   │   ├── trapezium.tpp
-│       │   │   └── triangle.tpp
-│       │   └── surfaces/
-│       │       ├── cylinder/
-│       │       │   └── cylinder.tpp
-│       │       ├── ellipsoid/
-│       │       │   └── ellipsoid.tpp
-│       │       ├── hyperboloid/
-│       │       │   └── hyperboloid.tpp
-│       │       ├── paraboloid/
-│       │       │   └── paraboloid.tpp
-│       │       ├── plane/
-│       │       │   ├── plane_3d.tpp
-│       │       │   └── plane_nd.tpp
-│       │       ├── sphere/
-│       │       │   └── sphere.tpp
-│       │       └── trapezoid/
-│       │           └── trapezoid.tpp
-│       ├── linear_algebra/
-│       │   ├── matrix/
-│       │   │   ├── matrix_2.tpp
-│       │   │   ├── matrix_3.tpp
-│       │   │   ├── matrix_4.tpp
-│       │   │   ├── matrix_mn.tpp
-│       │   │   └── matrix_n.tpp
-│       │   ├── solvers/
-│       │   │   ├── cholesky_d.tpp
-│       │   │   ├── conjugate_gradient_solver.tpp
-│       │   │   ├── eigen_d.tpp
-│       │   │   ├── gaussian_elimination.tpp
-│       │   │   ├── least_square_solver.tpp
-│       │   │   ├── linear_solver.tpp
-│       │   │   ├── lud.tpp
-│       │   │   ├── qrd.tpp
-│       │   │   └── svd.tpp
-│       │   ├── transform/
-│       │   │   ├── transform_2d/
-│       │   │   │   ├── rotation_2d.tpp
-│       │   │   │   ├── transform_2d.tpp
-│       │   │   │   ├── transform_affine_2d.tpp
-│       │   │   │   ├── transform_homo_2d.tpp
-│       │   │   │   └── translate_2d.tpp
-│       │   │   └── transform_3d/
-│       │   │       ├── rotation_3d.tpp
-│       │   │       ├── transform_3d.tpp
-│       │   │       ├── transform_affine_3d.tpp
-│       │   │       ├── transform_homo_3d.tpp
-│       │   │       └── translate_3d.tpp
-│       │   └── vector/
-│       │       ├── vector_2.tpp
-│       │       ├── vector_3.tpp
-│       │       ├── vector_4.tpp
-│       │       └── vector_n.tpp
-│       ├── math_general/
-│       │   └── math_general.tpp
-│       ├── probability/
-│       │   └── probability.tpp
-│       └── statistics/
-│           └── statistics.tpp
-└── tools/
-    ├── folder_tree.txt
-    └── generate_folder_tree.py
+│       └── math_lite.h
+└── src/
+    └── math_lite/
+        ├── algebra/
+        │   ├── complex/
+        │   │   └── complex.tpp
+        │   ├── dual_quaternion/
+        │   │   └── dual_quaternion.tpp
+        │   └── quaternion/
+        │       └── quaternion.tpp
+        ├── geometry/
+        │   ├── conics/
+        │   │   ├── circle/
+        │   │   │   ├── circle_2d.tpp
+        │   │   │   └── circle_3d.tpp
+        │   │   ├── ellipse/
+        │   │   │   ├── ellipse_2d.tpp
+        │   │   │   └── ellipse_3d.tpp
+        │   │   ├── hyperbola/
+        │   │   │   ├── hyperbola_2d.tpp
+        │   │   │   └── hyperbola_3d.tpp
+        │   │   └── parabola/
+        │   │       ├── parabola_2d.tpp
+        │   │       └── parabola_3d.tpp
+        │   ├── curves/
+        │   │   └── spline.tpp
+        │   ├── foundation/
+        │   │   ├── line/
+        │   │   │   ├── line_2d.tpp
+        │   │   │   ├── line_3d.tpp
+        │   │   │   └── line_nd.tpp
+        │   │   ├── point/
+        │   │   │   ├── point_1d.tpp
+        │   │   │   ├── point_2d.tpp
+        │   │   │   ├── point_3d.tpp
+        │   │   │   └── point_nd.tpp
+        │   │   └── ray/
+        │   │       ├── ray_2d.tpp
+        │   │       ├── ray_3d.tpp
+        │   │       └── ray_nd.tpp
+        │   ├── shapes/
+        │   │   ├── hexagon.tpp
+        │   │   ├── octagon.tpp
+        │   │   ├── parallelogram.tpp
+        │   │   ├── pentagon.tpp
+        │   │   ├── polygon.tpp
+        │   │   ├── quadrilateral.tpp
+        │   │   ├── rectangle.tpp
+        │   │   ├── rhombous.tpp
+        │   │   ├── septagon.tpp
+        │   │   ├── shapes.tpp
+        │   │   ├── square.tpp
+        │   │   ├── trapezium.tpp
+        │   │   └── triangle.tpp
+        │   └── surfaces/
+        │       ├── cylinder/
+        │       │   └── cylinder.tpp
+        │       ├── ellipsoid/
+        │       │   └── ellipsoid.tpp
+        │       ├── hyperboloid/
+        │       │   └── hyperboloid.tpp
+        │       ├── paraboloid/
+        │       │   └── paraboloid.tpp
+        │       ├── plane/
+        │       │   ├── plane_3d.tpp
+        │       │   └── plane_nd.tpp
+        │       ├── sphere/
+        │       │   └── sphere.tpp
+        │       └── trapezoid/
+        │           └── trapezoid.tpp
+        ├── linear_algebra/
+        │   ├── matrix/
+        │   │   ├── matrix_2.tpp
+        │   │   ├── matrix_3.tpp
+        │   │   ├── matrix_4.tpp
+        │   │   ├── matrix_mn.tpp
+        │   │   └── matrix_n.tpp
+        │   ├── solvers/
+        │   │   ├── cholesky_d.tpp
+        │   │   ├── conjugate_gradient_solver.tpp
+        │   │   ├── eigen_d.tpp
+        │   │   ├── gaussian_elimination.tpp
+        │   │   ├── least_square_solver.tpp
+        │   │   ├── linear_solver.tpp
+        │   │   ├── lud.tpp
+        │   │   ├── qrd.tpp
+        │   │   └── svd.tpp
+        │   ├── transform/
+        │   │   ├── transform_2d/
+        │   │   │   ├── rotation_2d.tpp
+        │   │   │   ├── transform_2d.tpp
+        │   │   │   ├── transform_affine_2d.tpp
+        │   │   │   ├── transform_homo_2d.tpp
+        │   │   │   └── translate_2d.tpp
+        │   │   └── transform_3d/
+        │   │       ├── rotation_3d.tpp
+        │   │       ├── transform_3d.tpp
+        │   │       ├── transform_affine_3d.tpp
+        │   │       ├── transform_homo_3d.tpp
+        │   │       └── translate_3d.tpp
+        │   └── vector/
+        │       ├── vector_2.tpp
+        │       ├── vector_3.tpp
+        │       ├── vector_4.tpp
+        │       └── vector_n.tpp
+        └── math_general/
+            └── math_general.tpp
