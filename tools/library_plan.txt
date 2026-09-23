@@ -42,8 +42,8 @@ math_lite/
 │       ├── lud.h
 │       ├── qrd.h
 │       └── svd.h
-├── lie_algebra/
-│   ├── lie_algebra.h
+├── lie/
+│   ├── lie.h
 │   ├── se2/
 │   │   └── se2.h
 │   ├── se3/
@@ -116,10 +116,8 @@ math_lite/
 │       │   └── ellipsoid.h
 │       ├── paraboloid/
 │       │   └── paraboloid.h
-│       ├── hyperboloid/
-│       │   └── hyperboloid.h
-│       └── trapezoid/
-│           └── trapezoid.h
+│       └── hyperboloid/
+│           └── hyperboloid.h
 ├── transformations/
 │       ├── transformations.h
 │       ├── 2d/
