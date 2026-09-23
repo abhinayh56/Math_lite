@@ -8,6 +8,8 @@
 #include "geometry/geometry.h"
 #include "transformations/transformations.h"
 #include "calculus/calculus.h"
+#include "probability/probability.h"
+#include "statistics/statistics.h"
 #include "numerical/numerical.h"
 #include "optimization/optimization.h"
 
