@@ -65,16 +65,11 @@ Math_lite/
         │   ├── shapes/
         │   │   ├── hexagon.h
         │   │   ├── octagon.h
-        │   │   ├── parallelogram.h
         │   │   ├── pentagon.h
         │   │   ├── polygon.h
         │   │   ├── quadrilateral.h
-        │   │   ├── rectangle.h
-        │   │   ├── rhombous.h
         │   │   ├── septagon.h
         │   │   ├── shapes.h
-        │   │   ├── square.h
-        │   │   ├── trapezium.h
         │   │   └── triangle.h
         │   └── surfaces/
         │       ├── cylinder/
