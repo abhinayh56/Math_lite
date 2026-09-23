@@ -89,8 +89,8 @@ Math_lite/
         │       ├── surfaces.h
         │       └── trapezoid/
         │           └── trapezoid.h
-        ├── lie_algebra/
-        │   ├── lie_algebra.h
+        ├── lie/
+        │   ├── lie.h
         │   ├── se2/
         │   │   └── se2.h
         │   ├── se3/
