@@ -8,5 +8,7 @@
 #include "geometry/geometry.h"
 #include "transformations/transformations.h"
 #include "calculus/calculus.h"
+#include "numerical/numerical.h"
+#include "optimization/optimization.h"
 
 #endif
