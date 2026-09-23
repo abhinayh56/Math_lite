@@ -5,8 +5,5 @@
 #include "algebra/algebra.h"
 #include "linear_algebra/linear_algebra.h"
 #include "geometry/geometry.h"
-#include "calculus/calculus.h"
-#include "probability/probability.h"
-#include "statistics/statistics.h"
 
 #endif

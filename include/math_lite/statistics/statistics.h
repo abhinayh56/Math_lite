@@ -1,5 +1,0 @@
-#ifndef MATH_LITE_STATISTICS_H
-#define MATH_LITE_STATISTICS_H
-
-
-#endif

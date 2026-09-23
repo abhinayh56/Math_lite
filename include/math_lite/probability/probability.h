@@ -1,5 +1,0 @@
-#ifndef MATH_LITE_PROBABILITY_H
-#define MATH_LITE_PROBABILITY_H
-
-
-#endif

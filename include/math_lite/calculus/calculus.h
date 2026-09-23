@@ -1,5 +1,0 @@
-#ifndef MATH_LITE_CALCULUS_H
-#define MATH_LITE_CALCULUS_H
-
-
-#endif
