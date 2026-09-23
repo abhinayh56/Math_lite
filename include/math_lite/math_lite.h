@@ -6,5 +6,7 @@
 #include "linear_algebra/linear_algebra.h"
 #include "lie_algebra/lie_algebra.h"
 #include "geometry/geometry.h"
+#include "transformations/transformations.h"
+#include "calculus/calculus.h"
 
 #endif
