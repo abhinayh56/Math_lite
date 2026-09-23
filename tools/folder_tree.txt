@@ -1,233 +1,169 @@
 Math_lite/
-├── include/
-│   └── math_lite/
-│       ├── algebra/
-│       │   ├── algebra.h
-│       │   ├── complex/
-│       │   │   └── complex.h
-│       │   ├── dual_quaternion/
-│       │   │   └── dual_quaternion.h
-│       │   └── quaternion/
-│       │       └── quaternion.h
-│       ├── geometry/
-│       │   ├── conics/
-│       │   │   ├── circle/
-│       │   │   │   ├── circle.h
-│       │   │   │   ├── circle_2d.h
-│       │   │   │   └── circle_3d.h
-│       │   │   ├── conics.h
-│       │   │   ├── ellipse/
-│       │   │   │   ├── ellipse.h
-│       │   │   │   ├── ellipse_2d.h
-│       │   │   │   └── ellipse_3d.h
-│       │   │   ├── hyperbola/
-│       │   │   │   ├── hyperbola.h
-│       │   │   │   ├── hyperbola_2d.h
-│       │   │   │   └── hyperbola_3d.h
-│       │   │   └── parabola/
-│       │   │       ├── parabola.h
-│       │   │       ├── parabola_2d.h
-│       │   │       └── parabola_3d.h
-│       │   ├── curves/
-│       │   │   ├── curves.h
-│       │   │   └── spline.h
-│       │   ├── foundation/
-│       │   │   ├── foundation.h
-│       │   │   ├── line/
-│       │   │   │   ├── line.h
-│       │   │   │   ├── line_2d.h
-│       │   │   │   ├── line_3d.h
-│       │   │   │   └── line_nd.h
-│       │   │   ├── point/
-│       │   │   │   ├── point.h
-│       │   │   │   ├── point_1d.h
-│       │   │   │   ├── point_2d.h
-│       │   │   │   ├── point_3d.h
-│       │   │   │   └── point_nd.h
-│       │   │   └── ray/
-│       │   │       ├── ray.h
-│       │   │       ├── ray_2d.h
-│       │   │       ├── ray_3d.h
-│       │   │       └── ray_nd.h
-│       │   ├── geometry.h
-│       │   ├── shapes/
-│       │   │   ├── hexagon.h
-│       │   │   ├── octagon.h
-│       │   │   ├── parallelogram.h
-│       │   │   ├── pentagon.h
-│       │   │   ├── polygon.h
-│       │   │   ├── quadrilateral.h
-│       │   │   ├── rectangle.h
-│       │   │   ├── rhombous.h
-│       │   │   ├── septagon.h
-│       │   │   ├── shapes.h
-│       │   │   ├── square.h
-│       │   │   ├── trapezium.h
-│       │   │   └── triangle.h
-│       │   └── surfaces/
-│       │       ├── cylinder/
-│       │       │   └── cylinder.h
-│       │       ├── ellipsoid/
-│       │       │   └── ellipsoid.h
-│       │       ├── hyperboloid/
-│       │       │   └── hyperboloid.h
-│       │       ├── paraboloid/
-│       │       │   └── paraboloid.h
-│       │       ├── plane/
-│       │       │   ├── plane.h
-│       │       │   ├── plane_3d.h
-│       │       │   └── plane_nd.h
-│       │       ├── sphere/
-│       │       │   └── sphere.h
-│       │       ├── surfaces.h
-│       │       └── trapezoid/
-│       │           └── trapezoid.h
-│       ├── linear_algebra/
-│       │   ├── linear_algebra.h
-│       │   ├── matrix/
-│       │   │   ├── matrix.h
-│       │   │   ├── matrix_2.h
-│       │   │   ├── matrix_3.h
-│       │   │   ├── matrix_4.h
-│       │   │   ├── matrix_mn.h
-│       │   │   └── matrix_n.h
-│       │   ├── solvers/
-│       │   │   ├── cholesky_d.h
-│       │   │   ├── conjugate_gradient_solver.h
-│       │   │   ├── eigen_d.h
-│       │   │   ├── gaussian_elimination.h
-│       │   │   ├── least_square_solver.h
-│       │   │   ├── linear_solver.h
-│       │   │   ├── lud.h
-│       │   │   ├── qrd.h
-│       │   │   ├── solvers.h
-│       │   │   └── svd.h
-│       │   ├── transform/
-│       │   │   ├── transform.h
-│       │   │   ├── transform_2d/
-│       │   │   │   ├── rotation_2d.h
-│       │   │   │   ├── transform_2d.h
-│       │   │   │   ├── transform_affine_2d.h
-│       │   │   │   ├── transform_homo_2d.h
-│       │   │   │   └── translate_2d.h
-│       │   │   └── transform_3d/
-│       │   │       ├── rotation_3d.h
-│       │   │       ├── transform_3d.h
-│       │   │       ├── transform_affine_3d.h
-│       │   │       ├── transform_homo_3d.h
-│       │   │       └── translate_3d.h
-│       │   └── vector/
-│       │       ├── vector.h
-│       │       ├── vector_2.h
-│       │       ├── vector_3.h
-│       │       ├── vector_4.h
-│       │       └── vector_n.h
-│       ├── math_general/
-│       │   └── math_general.h
-│       └── math_lite.h
-└── src/
+└── include/
     └── math_lite/
         ├── algebra/
+        │   ├── algebra.h
         │   ├── complex/
-        │   │   └── complex.tpp
+        │   │   └── complex.h
+        │   ├── dual/
+        │   │   └── dual.h
         │   ├── dual_quaternion/
-        │   │   └── dual_quaternion.tpp
+        │   │   └── dual_quaternion.h
+        │   ├── polynomial/
+        │   │   └── polynomial.h
         │   └── quaternion/
-        │       └── quaternion.tpp
+        │       └── quaternion.h
+        ├── calculus/
+        │   ├── calculus.h
+        │   ├── differentiation/
+        │   │   └── differentiation.h
+        │   ├── integration/
+        │   │   └── integration.h
+        │   └── series/
+        │       └── series.h
         ├── geometry/
         │   ├── conics/
         │   │   ├── circle/
-        │   │   │   ├── circle_2d.tpp
-        │   │   │   └── circle_3d.tpp
+        │   │   │   ├── circle.h
+        │   │   │   ├── circle_2d.h
+        │   │   │   └── circle_3d.h
+        │   │   ├── conics.h
         │   │   ├── ellipse/
-        │   │   │   ├── ellipse_2d.tpp
-        │   │   │   └── ellipse_3d.tpp
+        │   │   │   ├── ellipse.h
+        │   │   │   ├── ellipse_2d.h
+        │   │   │   └── ellipse_3d.h
         │   │   ├── hyperbola/
-        │   │   │   ├── hyperbola_2d.tpp
-        │   │   │   └── hyperbola_3d.tpp
+        │   │   │   ├── hyperbola.h
+        │   │   │   ├── hyperbola_2d.h
+        │   │   │   └── hyperbola_3d.h
         │   │   └── parabola/
-        │   │       ├── parabola_2d.tpp
-        │   │       └── parabola_3d.tpp
+        │   │       ├── parabola.h
+        │   │       ├── parabola_2d.h
+        │   │       └── parabola_3d.h
         │   ├── curves/
-        │   │   └── spline.tpp
+        │   │   ├── curves.h
+        │   │   └── spline.h
         │   ├── foundation/
+        │   │   ├── foundation.h
         │   │   ├── line/
-        │   │   │   ├── line_2d.tpp
-        │   │   │   ├── line_3d.tpp
-        │   │   │   └── line_nd.tpp
+        │   │   │   ├── line.h
+        │   │   │   ├── line_2d.h
+        │   │   │   ├── line_3d.h
+        │   │   │   └── line_nd.h
         │   │   ├── point/
-        │   │   │   ├── point_1d.tpp
-        │   │   │   ├── point_2d.tpp
-        │   │   │   ├── point_3d.tpp
-        │   │   │   └── point_nd.tpp
+        │   │   │   ├── point.h
+        │   │   │   ├── point_1d.h
+        │   │   │   ├── point_2d.h
+        │   │   │   ├── point_3d.h
+        │   │   │   └── point_nd.h
         │   │   └── ray/
-        │   │       ├── ray_2d.tpp
-        │   │       ├── ray_3d.tpp
-        │   │       └── ray_nd.tpp
+        │   │       ├── ray.h
+        │   │       ├── ray_2d.h
+        │   │       ├── ray_3d.h
+        │   │       └── ray_nd.h
+        │   ├── geometry.h
         │   ├── shapes/
-        │   │   ├── hexagon.tpp
-        │   │   ├── octagon.tpp
-        │   │   ├── parallelogram.tpp
-        │   │   ├── pentagon.tpp
-        │   │   ├── polygon.tpp
-        │   │   ├── quadrilateral.tpp
-        │   │   ├── rectangle.tpp
-        │   │   ├── rhombous.tpp
-        │   │   ├── septagon.tpp
-        │   │   ├── shapes.tpp
-        │   │   ├── square.tpp
-        │   │   ├── trapezium.tpp
-        │   │   └── triangle.tpp
+        │   │   ├── hexagon.h
+        │   │   ├── octagon.h
+        │   │   ├── parallelogram.h
+        │   │   ├── pentagon.h
+        │   │   ├── polygon.h
+        │   │   ├── quadrilateral.h
+        │   │   ├── rectangle.h
+        │   │   ├── rhombous.h
+        │   │   ├── septagon.h
+        │   │   ├── shapes.h
+        │   │   ├── square.h
+        │   │   ├── trapezium.h
+        │   │   └── triangle.h
         │   └── surfaces/
         │       ├── cylinder/
-        │       │   └── cylinder.tpp
+        │       │   └── cylinder.h
         │       ├── ellipsoid/
-        │       │   └── ellipsoid.tpp
+        │       │   └── ellipsoid.h
         │       ├── hyperboloid/
-        │       │   └── hyperboloid.tpp
+        │       │   └── hyperboloid.h
         │       ├── paraboloid/
-        │       │   └── paraboloid.tpp
+        │       │   └── paraboloid.h
         │       ├── plane/
-        │       │   ├── plane_3d.tpp
-        │       │   └── plane_nd.tpp
+        │       │   ├── plane.h
+        │       │   ├── plane_3d.h
+        │       │   └── plane_nd.h
         │       ├── sphere/
-        │       │   └── sphere.tpp
+        │       │   └── sphere.h
+        │       ├── surfaces.h
         │       └── trapezoid/
-        │           └── trapezoid.tpp
+        │           └── trapezoid.h
+        ├── lie_algebra/
+        │   ├── lie_algebra.h
+        │   ├── se2/
+        │   │   └── se2.h
+        │   ├── se3/
+        │   │   └── se3.h
+        │   ├── so2/
+        │   │   └── so2.h
+        │   └── so3/
+        │       └── so3.h
         ├── linear_algebra/
+        │   ├── decomposition/
+        │   │   ├── cholesky_d.h
+        │   │   ├── decomposition.h
+        │   │   ├── eigen_d.h
+        │   │   ├── lud.h
+        │   │   ├── qrd.h
+        │   │   └── svd.h
+        │   ├── linear_algebra.h
         │   ├── matrix/
-        │   │   ├── matrix_2.tpp
-        │   │   ├── matrix_3.tpp
-        │   │   ├── matrix_4.tpp
-        │   │   ├── matrix_mn.tpp
-        │   │   └── matrix_n.tpp
+        │   │   ├── matrix.h
+        │   │   ├── matrix_2.h
+        │   │   ├── matrix_3.h
+        │   │   ├── matrix_4.h
+        │   │   ├── matrix_mn.h
+        │   │   └── matrix_n.h
         │   ├── solvers/
-        │   │   ├── cholesky_d.tpp
-        │   │   ├── conjugate_gradient_solver.tpp
-        │   │   ├── eigen_d.tpp
-        │   │   ├── gaussian_elimination.tpp
-        │   │   ├── least_square_solver.tpp
-        │   │   ├── linear_solver.tpp
-        │   │   ├── lud.tpp
-        │   │   ├── qrd.tpp
-        │   │   └── svd.tpp
-        │   ├── transform/
-        │   │   ├── transform_2d/
-        │   │   │   ├── rotation_2d.tpp
-        │   │   │   ├── transform_2d.tpp
-        │   │   │   ├── transform_affine_2d.tpp
-        │   │   │   ├── transform_homo_2d.tpp
-        │   │   │   └── translate_2d.tpp
-        │   │   └── transform_3d/
-        │   │       ├── rotation_3d.tpp
-        │   │       ├── transform_3d.tpp
-        │   │       ├── transform_affine_3d.tpp
-        │   │       ├── transform_homo_3d.tpp
-        │   │       └── translate_3d.tpp
+        │   │   ├── conjugate_gradient_solver.h
+        │   │   ├── gaussian_elimination.h
+        │   │   ├── least_square_solver.h
+        │   │   ├── linear_solver.h
+        │   │   └── solvers.h
         │   └── vector/
-        │       ├── vector_2.tpp
-        │       ├── vector_3.tpp
-        │       ├── vector_4.tpp
-        │       └── vector_n.tpp
-        └── math_general/
-            └── math_general.tpp
+        │       ├── vector.h
+        │       ├── vector_2.h
+        │       ├── vector_3.h
+        │       ├── vector_4.h
+        │       └── vector_n.h
+        ├── math_general/
+        │   └── math_general.h
+        ├── math_lite.h
+        ├── numerical/
+        │   ├── approximation/
+        │   │   └── approximation.h
+        │   ├── differentiation/
+        │   │   └── differentiation.h
+        │   ├── integration/
+        │   │   └── integration.h
+        │   ├── interpolation/
+        │   │   └── interpolation.h
+        │   ├── numerical.h
+        │   └── root_finding/
+        │       └── root_finding.h
+        ├── optimization/
+        │   └── optimization.h
+        ├── probability/
+        │   └── probability.h
+        ├── statistics/
+        │   └── statistics.h
+        └── transformations/
+            ├── 2d/
+            │   ├── affine_2d.h
+            │   ├── homogeneous_2d.h
+            │   ├── rotation_2d.h
+            │   ├── transformations_2d.h
+            │   └── translation_2d.h
+            ├── 3d/
+            │   ├── affine_3d.h
+            │   ├── homogeneous_3d.h
+            │   ├── rotation_3d.h
+            │   ├── transformations_3d.h
+            │   └── translation_3d.h
+            └── transformations.h

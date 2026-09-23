@@ -13,7 +13,7 @@ ORDERED_FOLDERS = [
 # Paths to exclude, relative to root_path
 EXCLUDED_PATHS = [
     "tools",
-    # "src/temp",
+    "src",
     # "include/math_lite/internal.h",
 ]
 
